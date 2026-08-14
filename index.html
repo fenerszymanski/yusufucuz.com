@@ -305,15 +305,31 @@
 </div></footer>
 
 <script>
-  // Smooth in-page navigation. Done in JS so it also works when this page is
-  // embedded as the <yu-home> custom element inside Wix, where a bare
+  // Smooth in-page navigation. Hand-rolled because inside Wix the native
+  // scroll-behavior:'smooth' is ignored (only 'auto' lands), and a bare
   // href="#id" can be intercepted by the host page's router.
   (function(){
+    var NAV_OFFSET = 92; // sticky header height
+    function glide(toY){
+      var fromY = window.pageYOffset || document.documentElement.scrollTop || 0;
+      var dist = toY - fromY;
+      if(Math.abs(dist) < 2){ window.scrollTo(0, toY); return; }
+      var dur = Math.min(800, Math.max(280, Math.abs(dist) * 0.45));
+      var t0 = performance.now();
+      (function step(now){
+        var p = Math.min(1, (now - t0) / dur);
+        var e = p < 0.5 ? 2*p*p : 1 - Math.pow(-2*p + 2, 2)/2;
+        window.scrollTo(0, Math.round(fromY + dist * e));
+        if(p < 1) requestAnimationFrame(step);
+      })(t0);
+    }
     function go(hash){
-      if(hash === '#top' || hash === '#'){ window.scrollTo({ top: 0, behavior: 'smooth' }); return true; }
+      if(hash === '#top' || hash === '#'){ glide(0); return true; }
       var el = document.querySelector(hash);
-      if(el){ el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return true; }
-      return false;
+      if(!el) return false;
+      var y = el.getBoundingClientRect().top + (window.pageYOffset || 0) - NAV_OFFSET;
+      glide(Math.max(0, y));
+      return true;
     }
     document.addEventListener('click', function(e){
       var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;

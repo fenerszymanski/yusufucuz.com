@@ -23,21 +23,37 @@
     }
 
     _wireNav() {
-      // In-page links are scrolled in JS: inside Wix a bare href="#id" can be
-      // swallowed by the host page's router. Scoped to this element.
+      // In-page links are scrolled by hand: inside Wix a bare href="#id" can be
+      // swallowed by the host router, AND native scroll-behavior:'smooth' is
+      // ignored there (only an instant jump lands). Scoped to this element.
       const root = this;
+      const NAV_OFFSET = 92; // sticky header height
+
+      function glide(toY) {
+        const fromY = window.pageYOffset || document.documentElement.scrollTop || 0;
+        const dist = toY - fromY;
+        if (Math.abs(dist) < 2) { window.scrollTo(0, toY); return; }
+        const dur = Math.min(800, Math.max(280, Math.abs(dist) * 0.45));
+        const t0 = performance.now();
+        (function step(now) {
+          const p = Math.min(1, (now - t0) / dur);
+          const e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          window.scrollTo(0, Math.round(fromY + dist * e));
+          if (p < 1) requestAnimationFrame(step);
+        })(t0);
+      }
+
       root.addEventListener('click', (e) => {
         const a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
         if (!a || !root.contains(a)) return;
         const hash = a.getAttribute('href');
         if (!hash) return;
-        if (hash === '#top' || hash === '#') {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          e.preventDefault();
-          return;
-        }
+        if (hash === '#top' || hash === '#') { glide(0); e.preventDefault(); return; }
         const el = root.querySelector(hash);
-        if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); e.preventDefault(); }
+        if (!el) return;
+        const y = el.getBoundingClientRect().top + (window.pageYOffset || 0) - NAV_OFFSET;
+        glide(Math.max(0, y));
+        e.preventDefault();
       });
     }
 
