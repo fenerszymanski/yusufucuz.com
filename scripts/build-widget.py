@@ -94,7 +94,27 @@ def main():
         (document.head || document.documentElement).appendChild(l);
       }}
       this.innerHTML = '<style>' + CSS + '</style>' + MARKUP;
+      this._wireNav();
       this._wireForm();
+    }}
+
+    _wireNav() {{
+      // In-page links are scrolled in JS: inside Wix a bare href="#id" can be
+      // swallowed by the host page's router. Scoped to this element.
+      const root = this;
+      root.addEventListener('click', (e) => {{
+        const a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+        if (!a || !root.contains(a)) return;
+        const hash = a.getAttribute('href');
+        if (!hash) return;
+        if (hash === '#top' || hash === '#') {{
+          window.scrollTo({{ top: 0, behavior: 'smooth' }});
+          e.preventDefault();
+          return;
+        }}
+        const el = root.querySelector(hash);
+        if (el) {{ el.scrollIntoView({{ behavior: 'smooth', block: 'start' }}); e.preventDefault(); }}
+      }});
     }}
 
     _wireForm() {{

@@ -45,7 +45,7 @@
 
   nav{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:10}
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-  .brand{font-size:23px;letter-spacing:.2px;color:var(--ink)}
+  .brand{font-size:23px;letter-spacing:.2px;color:var(--ink);cursor:pointer}
   .brand b{font-weight:600}
   .navlinks{display:flex;gap:30px;font-size:14.5px;color:var(--muted)}
   .navlinks a:hover{color:var(--ochre)}
@@ -158,12 +158,12 @@
 <body>
 
 <nav><div class="wrap nav">
-  <div class="brand fr">Yusuf <b>Ucuz</b></div>
+  <a class="brand fr" href="#top" aria-label="Back to top">Yusuf <b>Ucuz</b></a>
   <div class="navlinks">
     <a href="#private">Private tours</a><a href="#story">My story</a>
     <a href="#reviews">Reviews</a><a href="https://www.berlinwalk.com/book-berlin-walking-tour/berlin-free-walking-tour-tip-based">Free tour</a>
   </div>
-  <a class="btn btn-primary" href="https://www.berlinwalk.com/private-tour">Book a private tour</a>
+  <a class="btn btn-primary" href="#book">Book a private tour</a>
 </div></nav>
 
 <header class="wrap hero">
@@ -172,7 +172,7 @@
     <h1 class="fr" style="margin-top:14px">The Berlin<br>I actually <em>live in</em>.</h1>
     <p class="lead">Skip the script. I walk small groups through the historic heart of Berlin the way I would show a friend. Real history, real stories, and my honest take on where to go next.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="https://www.berlinwalk.com/private-tour">Book a private tour</a>
+      <a class="btn btn-primary" href="#book">Book a private tour</a>
       <a class="btn btn-ghost" href="https://www.berlinwalk.com/book-berlin-walking-tour/berlin-free-walking-tour-tip-based">Or join my free walk</a>
     </div>
     <div class="trust">
@@ -231,7 +231,7 @@
       <div class="li">Private, never shared with strangers</div>
       <div class="li">A route built around your interests</div>
       <div class="li">Meet where it suits you</div>
-      <a class="btn btn-ochre" href="https://www.berlinwalk.com/private-tour">Request a date</a>
+      <a class="btn btn-ochre" href="#book">Request a date</a>
       <div class="fine">No payment now. I confirm your date first, then send a secure Stripe link.</div>
     </div>
   </div>
@@ -305,6 +305,25 @@
 </div></footer>
 
 <script>
+  // Smooth in-page navigation. Done in JS so it also works when this page is
+  // embedded as the <yu-home> custom element inside Wix, where a bare
+  // href="#id" can be intercepted by the host page's router.
+  (function(){
+    function go(hash){
+      if(hash === '#top' || hash === '#'){ window.scrollTo({ top: 0, behavior: 'smooth' }); return true; }
+      var el = document.querySelector(hash);
+      if(el){ el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return true; }
+      return false;
+    }
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if(!a) return;
+      var hash = a.getAttribute('href');
+      if(!hash) return;
+      if(go(hash)) e.preventDefault();
+    });
+  })();
+
   (function(){
     var form = document.getElementById('enquiry');
     if(!form) return;
