@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yusuf Ucuz — Private Berlin tour guide</title>
+<meta name="description" content="Private walking tours of Berlin's historic centre, led by Yusuf, a local guide. Small groups, from €249. Rated 9.8/10 on FreeTour.">
+<link rel="canonical" href="https://www.yusufucuz.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yusuf Ucuz — Private Berlin tour guide">
+<meta property="og:description" content="Private walking tours of Berlin's historic centre, led by a local. Small groups, from €249. Rated 9.8/10 on FreeTour.">
+<meta property="og:url" content="https://www.yusufucuz.com/">
+<meta property="og:image" content="https://www.yusufucuz.com/assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF8F1; --sand:#F0E7D6; --ink:#1C1A15; --ink-dk:#100E0A; --muted:#6B6357; --line:#E4DBC9;
+    --ochre:#B0782A; --ochre-dk:#8E5F1E; --green:#1B5E20; --green-dk:#123D18; --lime:#7CB342;
+    --on-dark:#FBF8F1; --on-dark-muted:#A79E8C; --line-dark:#38332a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);
+    font-family:"Work Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.62;-webkit-font-smoothing:antialiased}
+  .fr{font-family:Newsreader,Georgia,"Times New Roman",serif}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .btn{display:inline-block;padding:13px 25px;border-radius:4px;font-size:15px;font-weight:600;transition:.15s;cursor:pointer}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:var(--ink-dk)}
+  .btn-ochre{background:var(--ochre);color:#241a08;font-weight:600;border:0}
+  .btn-ochre:hover{background:var(--ochre-dk);color:#fff}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn-green{border:1px solid var(--green);color:var(--green)}
+  .btn-green:hover{background:var(--green);color:var(--paper)}
+  .eyebrow{font-family:"Work Sans",sans-serif;font-size:12px;letter-spacing:2.5px;
+    text-transform:uppercase;color:var(--ochre);font-weight:600}
+
+  nav{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{font-size:23px;letter-spacing:.2px;color:var(--ink)}
+  .brand b{font-weight:600}
+  .navlinks{display:flex;gap:30px;font-size:14.5px;color:var(--muted)}
+  .navlinks a:hover{color:var(--ochre)}
+  .nav .btn{padding:9px 19px;font-size:14px}
+
+  .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center;padding:72px 0 60px}
+  .hero h1{font-size:60px;line-height:1.02;font-weight:500;letter-spacing:-.5px;color:var(--ink)}
+  .hero h1 em{font-style:italic;color:var(--ochre)}
+  .hero p.lead{font-size:19px;color:var(--muted);margin:24px 0 30px;max-width:31em}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{display:flex;gap:11px 14px;margin-top:34px;flex-wrap:wrap;align-items:center;
+    border-top:1px solid var(--line);padding-top:22px}
+  .chip{display:inline-block;font-size:12.5px;letter-spacing:.3px;
+    border:1px solid var(--line);border-radius:20px;padding:6px 13px;color:var(--ink)}
+  .chip.rate{background:var(--green);color:var(--paper);border-color:var(--green);font-weight:600}
+
+  .hero-photo{position:relative;aspect-ratio:4/5;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#e6ddca}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:52% 18%}
+  .hero-photo .badge{position:absolute;left:16px;bottom:16px;background:#fbf8f1f2;border-radius:9px;
+    padding:9px 14px;display:flex;align-items:center;gap:11px;box-shadow:0 3px 14px #1c1a1524}
+  .hero-photo .badge .num{font-family:Newsreader,serif;font-size:26px;color:var(--green-dk);line-height:1}
+  .hero-photo .badge .lb{font-size:10.5px;letter-spacing:.6px;color:var(--muted);line-height:1.35;font-weight:500;text-transform:uppercase}
+
+  section{padding:66px 0}
+  .story{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .story-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:46px;align-items:center}
+  .story .photo{aspect-ratio:4/3;border-radius:8px;overflow:hidden;border:1px solid var(--line);position:relative}
+  .story .photo img{width:100%;height:100%;object-fit:cover}
+  .story .photo figcaption{position:absolute;left:12px;bottom:12px;background:#fbf8f1ee;color:var(--muted);
+    font-size:11.5px;letter-spacing:.5px;padding:5px 11px;border-radius:5px;font-weight:500}
+  .story blockquote{font-size:25px;line-height:1.46;font-weight:400;margin:14px 0 16px;color:var(--ink)}
+  .sign{font-size:32px;color:var(--ochre)}
+
+  .sec-head{max-width:38em}
+  .sec-head h2{font-size:38px;font-weight:500;line-height:1.1;margin-top:12px;color:var(--ink)}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:16.5px}
+
+  .offer{margin-top:34px;display:grid;grid-template-columns:1.15fr .85fr;
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--paper)}
+  .offer .left{padding:36px 36px 30px}
+  .offer h3{font-size:27px;font-weight:500;color:var(--ink);margin-bottom:8px}
+  .offer .themes{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 22px}
+  .theme{font-size:13px;background:var(--sand);color:var(--ink);
+    border:1px solid #e0d3ba;border-radius:20px;padding:6px 14px}
+  .offer .right{background:var(--ink);color:#eae6da;padding:36px;display:flex;flex-direction:column;justify-content:center}
+  .offer .right .price b{font-family:Newsreader,serif;font-size:44px;font-weight:500;color:#fff;display:block;line-height:1.02}
+  .offer .right .sub{font-size:13.5px;color:var(--on-dark-muted);margin-top:3px}
+  .offer .right hr{border:0;border-top:1px solid var(--line-dark);margin:20px 0}
+  .offer .right .li{font-size:14px;color:#ddd6c6;margin:7px 0;padding-left:20px;position:relative}
+  .offer .right .li:before{content:"›";position:absolute;left:2px;color:var(--ochre);font-weight:700}
+  .offer .right .btn{margin-top:22px;text-align:center}
+  .offer .right .fine{font-size:11.5px;color:var(--on-dark-muted);margin-top:12px;line-height:1.5}
+
+  .free-row{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;margin-top:20px;
+    border:1px dashed #d8cbb2;border-radius:16px;padding:24px 30px}
+  .free-row h3{font-size:21px;font-weight:500;color:var(--ink)}
+  .free-row p{color:var(--muted);font-size:14.5px;margin-top:4px}
+
+  .reviews{background:var(--ink);color:var(--paper);text-align:center}
+  .reviews .eyebrow{color:var(--ochre)}
+  .reviews .big{font-family:Newsreader,serif;font-size:74px;color:#fff;line-height:1;margin:14px 0 6px;font-weight:500}
+  .reviews .stars{color:var(--ochre);font-size:22px;letter-spacing:5px}
+  .reviews .sub{color:var(--on-dark-muted);margin-top:10px;font-size:15px}
+  .subratings{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:26px 0 22px}
+  .sr{font-size:13px;color:#e8e1d2;border:1px solid var(--line-dark);border-radius:20px;padding:6px 14px}
+  .sr b{color:var(--ochre);font-weight:600}
+  .reviews a.link{color:var(--lime);font-size:13.5px;font-weight:500;border-bottom:1px solid #7cb3424d;padding-bottom:2px}
+
+  .enquire-wrap{position:relative;overflow:hidden}
+  .enquire-wrap .bg{position:absolute;inset:0}
+  .enquire-wrap .bg img{width:100%;height:100%;object-fit:cover}
+  .enquire-wrap .ov{position:absolute;inset:0;background:linear-gradient(180deg,#1c1a15e6,#1c1a15f4)}
+  .enquire{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:78px 0}
+  .ecopy .eyebrow{color:var(--ochre)}
+  .ecopy h2{font-family:Newsreader,serif;font-size:40px;font-weight:500;color:#fff;margin:12px 0 12px}
+  .ecopy p{color:#ddd6c6;font-size:16.5px;max-width:30em}
+  .ass{list-style:none;margin-top:20px;display:grid;gap:10px}
+  .ass li{font-size:14px;color:#cfc7b8;padding-left:22px;position:relative}
+  .ass li:before{content:"✓";position:absolute;left:0;color:var(--lime);font-weight:700}
+  .ecard{background:var(--paper);border-radius:16px;padding:28px 28px 26px;box-shadow:0 10px 40px #00000040}
+  .ecard .fh{font-family:Newsreader,serif;font-size:20px;color:var(--ink);margin-bottom:4px}
+  .ecard .fsub{font-size:13px;color:var(--muted);margin-bottom:16px}
+  .fld{margin-bottom:13px}
+  .fld label{display:block;font-size:12px;font-weight:600;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .fld input,.fld textarea{width:100%;font-family:inherit;font-size:15px;color:var(--ink);background:#fff;
+    border:1px solid var(--line);border-radius:7px;padding:11px 13px;transition:.15s}
+  .fld input:focus,.fld textarea:focus{outline:0;border-color:var(--ochre);box-shadow:0 0 0 3px #b0782a26}
+  .fld textarea{resize:vertical;min-height:66px}
+  .frow{display:grid;grid-template-columns:1fr .5fr;gap:12px}
+  .ecard button{width:100%;margin-top:6px;font-size:15.5px;padding:14px}
+  .formnote{font-size:11.5px;color:var(--muted);margin-top:11px;line-height:1.5}
+  .ferror{display:none;font-size:13px;color:#a3341f;margin-top:10px}
+  .fok{display:none;text-align:center;padding:20px 6px}
+  .fok .fr{font-size:22px;color:var(--green);margin-bottom:6px}
+  .fok p{font-size:14.5px;color:var(--muted)}
+
+  footer{background:var(--sand);border-top:1px solid var(--line);padding:44px 0;font-size:14px;color:var(--muted)}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  .foot b{color:var(--ink)}
+  .foot a:hover{color:var(--ochre)}
+
+  @media(max-width:840px){
+    .hero{grid-template-columns:1fr;gap:30px;padding:44px 0}.hero h1{font-size:42px}
+    .story-grid,.offer,.enquire{grid-template-columns:1fr}.navlinks{display:none}
+    .free-row{grid-template-columns:1fr}.reviews .big{font-size:58px}.ecopy h2{font-size:32px}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav">
+  <div class="brand fr">Yusuf <b>Ucuz</b></div>
+  <div class="navlinks">
+    <a href="#private">Private tours</a><a href="#story">My story</a>
+    <a href="#reviews">Reviews</a><a href="#free">Free tour</a>
+  </div>
+  <a class="btn btn-primary" href="#book">Book a private tour</a>
+</div></nav>
+
+<header class="wrap hero">
+  <div>
+    <span class="eyebrow">Private guide · Berlin</span>
+    <h1 class="fr" style="margin-top:14px">The Berlin<br>I actually <em>live in</em>.</h1>
+    <p class="lead">Skip the script. I walk small groups through the historic heart of Berlin the way I would show a friend. Real history, real stories, and my honest take on where to go next.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#private">Book a private tour</a>
+      <a class="btn btn-ghost" href="#free">Or join my free walk</a>
+    </div>
+    <div class="trust">
+      <span class="chip rate">9.8 / 10 on FreeTour</span>
+      <span class="chip">Small groups</span>
+      <span class="chip">In English</span>
+      <span class="chip">Berlin local</span>
+    </div>
+  </div>
+  <figure class="hero-photo">
+    <img src="assets/hero.jpg" alt="Yusuf guiding in front of the Rotes Rathaus in Berlin" width="1100" height="1375">
+    <div class="badge">
+      <span class="num fr">9.8</span>
+      <span class="lb">Rated 9.8 / 10<br>25 reviews · FreeTour</span>
+    </div>
+  </figure>
+</header>
+
+<section class="story" id="story"><div class="wrap story-grid">
+  <figure class="photo">
+    <img src="assets/guests.jpg" alt="Yusuf with a group of guests on tour in Berlin" loading="lazy">
+    <figcaption>On tour with my guests</figcaption>
+  </figure>
+  <div>
+    <span class="eyebrow">Hello, I'm Yusuf</span>
+    <blockquote class="fr">I spent years doing digital marketing for things I didn't always believe in. Three years ago I moved to Berlin, and about a year ago I started something of my own. Showing people this city, one small group at a time.</blockquote>
+    <p style="color:var(--muted);font-size:16.5px">It is the most useful, most human work I have done. No headset, no checklist. Just real Berlin, and the stories behind the streets you are standing on.</p>
+    <div class="sign fr" style="margin-top:14px">Yusuf</div>
+  </div>
+</div></section>
+
+<section class="wrap" id="private">
+  <div class="sec-head">
+    <span class="eyebrow">Walk with me</span>
+    <h2 class="fr">A private tour, shaped around you</h2>
+    <p>One booking, just your group. The historic centre is the spine, and I build the walk around what you actually want to see.</p>
+  </div>
+
+  <div class="offer">
+    <div class="left">
+      <h3 class="fr">Private walking tour</h3>
+      <p style="color:var(--muted);font-size:15.5px">About two hours on foot, at your pace, through Berlin's historic core. Pick a focus, or leave it to me:</p>
+      <div class="themes">
+        <span class="theme">The classic centre</span>
+        <span class="theme">With children</span>
+        <span class="theme">Step-free and slow</span>
+        <span class="theme">The 20th century</span>
+        <span class="theme">Museum Island focus</span>
+        <span class="theme">Just the highlights</span>
+      </div>
+      <p style="color:var(--muted);font-size:14.5px">Enquiry first. You send your dates and group, I confirm the plan, then you pay securely to lock it in.</p>
+    </div>
+    <div class="right">
+      <div class="price">from <b>€249</b><span class="sub">up to 6 guests · €299 up to 10</span></div>
+      <hr>
+      <div class="li">Private, never shared with strangers</div>
+      <div class="li">A route built around your interests</div>
+      <div class="li">Meet where it suits you</div>
+      <a class="btn btn-ochre" href="#book">Request a date</a>
+      <div class="fine">No payment now. I confirm your date first, then send a secure Stripe link.</div>
+    </div>
+  </div>
+
+  <div class="free-row" id="free">
+    <div>
+      <h3 class="fr">New to Berlin? Start with my free walk.</h3>
+      <p>A tip-based walking tour every Tuesday and Saturday. Twelve stops, about two hours. Come along, then go deeper with a private tour.</p>
+    </div>
+    <a class="btn btn-green" href="https://www.berlinwalk.com">Free tour → berlinwalk.com</a>
+  </div>
+</section>
+
+<section class="reviews" id="reviews"><div class="wrap">
+  <span class="eyebrow">What guests say</span>
+  <div class="big fr">9.8</div>
+  <div class="stars">★★★★★</div>
+  <div class="sub">Rated 9.8 out of 10 across 25 reviews on FreeTour</div>
+  <div class="subratings">
+    <span class="sr">Content <b>10.0</b></span>
+    <span class="sr">Guide <b>9.9</b></span>
+    <span class="sr">Atmosphere <b>9.9</b></span>
+    <span class="sr">Organization <b>9.9</b></span>
+    <span class="sr">Usefulness <b>9.8</b></span>
+  </div>
+  <a class="link" href="https://www.freetour.com/berlin/berlin-behind-the-landmarks-a-walk-through-power-faith-change" target="_blank" rel="noopener">Read the reviews on FreeTour →</a>
+</div></section>
+
+<section class="enquire-wrap" id="book">
+  <div class="bg"><img src="assets/sunset.jpg" alt="" loading="lazy"></div>
+  <div class="ov"></div>
+  <div class="wrap enquire">
+    <div class="ecopy">
+      <span class="eyebrow">Ready when you are</span>
+      <h2>Let's plan your Berlin</h2>
+      <p>Tell me your dates and what you are curious about. I usually reply within a day, with a date and a secure payment link.</p>
+      <ul class="ass">
+        <li>One price for the whole group, about two hours</li>
+        <li>No payment now. I confirm the date first, then send a secure link</li>
+        <li>Full refund up to 48 hours before the walk. Tours run in the rain</li>
+      </ul>
+    </div>
+
+    <form class="ecard" id="enquiry" novalidate>
+      <div class="fform">
+        <div class="fh fr">Send your enquiry</div>
+        <div class="fsub">from €249 up to 6 guests · €299 up to 10</div>
+        <div class="fld"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+        <div class="fld"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@email.com" required></div>
+        <div class="frow">
+          <div class="fld"><label for="dates">Preferred date(s)</label><input id="dates" name="dates" type="text" placeholder="e.g. 22 or 23 Aug" required></div>
+          <div class="fld"><label for="group">Group size</label><input id="group" name="group" type="number" min="1" max="10" placeholder="1-10" required></div>
+        </div>
+        <div class="fld"><label for="interests">What would you like to see? (optional)</label><textarea id="interests" name="interests" placeholder="Kids, the Wall, step-free, museums, or just the highlights"></textarea></div>
+        <button class="btn btn-primary" type="submit" id="submitBtn">Send my enquiry</button>
+        <div class="ferror" id="ferror"></div>
+        <p class="formnote">I reply within a day with a date and a secure payment link. Your details are only used to arrange the walk.</p>
+      </div>
+      <div class="fok" id="fok">
+        <div class="fr">Thank you, your enquiry is on its way.</div>
+        <p>I will reply within a day with a date and a secure payment link. If you do not hear back, email <a href="mailto:info@yusufucuz.com" style="color:var(--ochre)">info@yusufucuz.com</a>.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap foot">
+  <div><b class="fr" style="font-size:17px">Yusuf Ucuz</b> · Private tour guide, Berlin</div>
+  <div><a href="mailto:info@yusufucuz.com">info@yusufucuz.com</a> · <a href="https://instagram.com/berlinwalkingtour" target="_blank" rel="noopener">@berlinwalkingtour</a></div>
+  <div><a href="https://www.berlinwalk.com">berlinwalk.com</a></div>
+</div></footer>
+
+<script>
+  (function(){
+    var form = document.getElementById('enquiry');
+    if(!form) return;
+    var btn = document.getElementById('submitBtn');
+    var errEl = document.getElementById('ferror');
+    var okEl = document.getElementById('fok');
+    var fields = form.querySelector('.fform');
+
+    function showError(msg){ errEl.textContent = msg; errEl.style.display = 'block'; }
+    function clearError(){ errEl.style.display = 'none'; }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      clearError();
+      var data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        dates: form.dates.value.trim(),
+        group: form.group.value.trim(),
+        interests: form.interests.value.trim()
+      };
+      if(data.name.length < 2) return showError('Please enter your name.');
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return showError('Please enter a valid email address.');
+      if(data.dates.length < 2) return showError('Please enter at least one preferred date.');
+      var g = parseInt(data.group, 10);
+      if(!(g >= 1 && g <= 10)) return showError('Please enter a group size from 1 to 10.');
+
+      btn.disabled = true; btn.textContent = 'Sending…';
+      fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function(r){ return r.json().then(function(j){ return { ok: r.ok, j: j }; }); })
+        .then(function(res){
+          if(res.ok && res.j && res.j.ok){
+            fields.style.display = 'none';
+            okEl.style.display = 'block';
+          } else {
+            showError((res.j && res.j.error) || 'Something went wrong. Please email info@yusufucuz.com.');
+            btn.disabled = false; btn.textContent = 'Send my enquiry';
+          }
+        })
+        .catch(function(){
+          var body = encodeURIComponent('Name: '+data.name+'\nEmail: '+data.email+'\nDates: '+data.dates+'\nGroup: '+data.group+'\nInterests: '+data.interests);
+          showError('Could not send just now. Click here to email me instead: ');
+          errEl.innerHTML += '<a href="mailto:info@yusufucuz.com?subject=Private%20tour%20enquiry&body='+body+'" style="color:var(--ochre);text-decoration:underline">info@yusufucuz.com</a>';
+          btn.disabled = false; btn.textContent = 'Send my enquiry';
+        });
+    });
+  })();
+</script>
+</body>
+</html>

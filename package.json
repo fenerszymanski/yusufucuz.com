@@ -1,0 +1,10 @@
+{
+  "name": "yusufucuz-com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "yusufucuz.com — personal brand site for Yusuf Ucuz, private Berlin tour guide. Static site + one serverless enquiry endpoint, deployed on Vercel.",
+  "engines": {
+    "node": ">=18"
+  }
+}
