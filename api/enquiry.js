@@ -36,10 +36,19 @@ function parse(body) {
 
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
+  const origin = String(req.headers.origin || '');
+  if (origin && originAllowed(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Vary', 'Origin');
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Max-Age', '86400');
+
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'Method not allowed.' });
 
-  if (!originAllowed(String(req.headers.origin || ''))) {
+  if (!originAllowed(origin)) {
     return res.status(403).json({ ok: false, error: 'This form can only be submitted from yusufucuz.com.' });
   }
 
