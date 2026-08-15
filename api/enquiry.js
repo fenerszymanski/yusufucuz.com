@@ -10,10 +10,12 @@
 
 import { wixFetch } from './_lib/wix.js';
 import { sendGmail, gmailConfigured } from './_lib/gmail.js';
+import { sendWixEmail, wixMailConfigured } from './_lib/wix-mail.js';
 
 const SITE_ID = process.env.WIX_SITE_ID || '12ee5ea0-70a7-492f-8020-ffb27cbb630f';
 const FORM_ID = process.env.WIX_FORM_ID || '5c5da80a-d838-49f6-b725-1a15c9838bc9';
 const NOTIFY_TO = process.env.ENQUIRY_TO || 'info@yusufucuz.com';
+const SENDER_EMAIL = process.env.ENQUIRY_FROM || 'info@yusufucuz.com';
 
 function clean(value, max) {
   return String(value == null ? '' : value).replace(/\s+/g, ' ').trim().slice(0, max);
@@ -87,7 +89,7 @@ async function sendViaResend({ to, subject, text, html, replyTo }) {
 }
 
 async function notifyByEmail(v) {
-  if (!gmailConfigured() && !process.env.RESEND_API_KEY) return { status: 'not_configured' };
+  if (!wixMailConfigured() && !gmailConfigured() && !process.env.RESEND_API_KEY) return { status: 'not_configured' };
 
   const text = [
     'New private-tour enquiry from yusufucuz.com',
@@ -115,8 +117,23 @@ async function notifyByEmail(v) {
 
   const subject = `Private tour enquiry — ${v.name} (${v.group} pax, ${v.dates})`;
 
-  // Prefer Yusuf's own Gmail when it is configured; otherwise fall back to
-  // Resend. Whichever credential is present is the one that gets used.
+  // 1st choice: Wix's own Email Transmissions API, addressed to info@ — the one
+  // route proven to reach the inbox (the Forms automation mails the gmail
+  // contact instead, and that never arrives).
+  if (wixMailConfigured()) {
+    const viaWix = await sendWixEmail({
+      siteId: SITE_ID,
+      to: NOTIFY_TO,
+      subject,
+      html,
+      senderName: 'Yusuf from BerlinWalk',
+      senderEmail: SENDER_EMAIL,
+      replyTo: v.email,
+    });
+    if (viaWix.status === 'sent') return viaWix;
+  }
+
+  // Fallbacks, only if a credential for them exists.
   if (gmailConfigured()) {
     const sent = await sendGmail({ to: NOTIFY_TO, subject, text, html, headers: { 'Reply-To': v.email } });
     if (sent.status === 'sent') return sent;
