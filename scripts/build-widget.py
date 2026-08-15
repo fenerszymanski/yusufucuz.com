@@ -65,6 +65,9 @@ def scope_css(css, scope):
 def main():
     html = SRC.read_text()
     css = re.search(r"<style>(.*?)</style>", html, re.S).group(1)
+    # Strip comments first: the scoper would otherwise treat a comment as part
+    # of the next selector and produce `yu-home /* ... */ .foo`, which is invalid.
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
     scoped = scope_css(css, "yu-home").strip()
 
     body = re.search(r"<body>(.*?)<script>", html, re.S).group(1).strip()
