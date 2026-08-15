@@ -52,7 +52,7 @@
   .nav .btn{padding:9px 19px;font-size:14px}
   #story,#private,#reviews,#free,#book{scroll-margin-top:92px}
 
-  .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center;padding:72px 0 60px}
+  .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center;padding-top:72px;padding-bottom:60px}
   .hero h1{font-size:60px;line-height:1.02;font-weight:500;letter-spacing:-.5px;color:var(--ink)}
   .hero h1 em{font-style:italic;color:var(--ochre)}
   .hero p.lead{font-size:19px;color:var(--muted);margin:24px 0 30px;max-width:31em}
@@ -119,7 +119,7 @@
   .enquire-wrap .bg{position:absolute;inset:0}
   .enquire-wrap .bg img{width:100%;height:100%;object-fit:cover}
   .enquire-wrap .ov{position:absolute;inset:0;background:linear-gradient(180deg,#1c1a15e6,#1c1a15f4)}
-  .enquire{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:78px 0}
+  .enquire{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:78px;padding-bottom:78px}
   .ecopy .eyebrow{color:var(--ochre)}
   .ecopy h2{font-family:Newsreader,serif;font-size:40px;font-weight:500;color:#fff;margin:12px 0 12px}
   .ecopy p{color:#ddd6c6;font-size:16.5px;max-width:30em}
@@ -149,9 +149,11 @@
   .foot a:hover{color:var(--ochre)}
 
   @media(max-width:840px){
-    .hero{grid-template-columns:1fr;gap:30px;padding:44px 0}.hero h1{font-size:42px}
+    .hero{grid-template-columns:1fr;gap:30px;padding-top:44px;padding-bottom:44px}.hero h1{font-size:42px}
     .story-grid,.offer,.enquire{grid-template-columns:1fr}.navlinks{display:none}
     .free-row{grid-template-columns:1fr}.reviews .big{font-size:58px}.ecopy h2{font-size:32px}
+    /* iOS Safari zooms the page when a focused field is under 16px */
+    .fld input,.fld textarea{font-size:16px}
   }
 </style>
 </head>
