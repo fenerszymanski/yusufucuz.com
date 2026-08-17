@@ -1,4 +1,4 @@
-# Where we stopped — 5 posts published, footer still shows the old CV site
+# Where we stopped — 5 posts live, header and footer standardised
 
 ## Done
 
@@ -21,23 +21,48 @@
     data problem — the posts were correct in the API and on their own pages the whole time).
     If it ever looks empty again after a publish, it's almost certainly this, not broken data.
 
-## New problem found while checking this — not fixed yet
+## Header and footer, now standardised (both live)
 
-**The blog/post pages have a footer with the old CV-site links**: Home · CV · Portfolio ·
-My LinkedIn · Email Me · Contact. Same species of bug as the header was two sessions ago, just
-the footer this time — nobody caught it because the header fix didn't touch it. The links
-aren't 404s (they redirect to `/`), so nothing is broken, but it's a visible, off-brand
-leftover on every post page. Only seen on Wix-native pages (`/blog`, `/post/...`); the
-homepage has no header *or* footer, it's a custom element. Worth the same treatment as the
-header — hasn't been scoped or started.
+**Footer** was still the old CV site's: Home · CV · Portfolio · My LinkedIn · Email Me ·
+Contact. Rebuilt in place — same six buttons, new labels and links:
+**Home · Blog · Private tours | Free tour · Email · Instagram**. Two things surfaced doing it:
+the *Home* button had no page set at all (an empty "Page" selection, so it only worked via the
+redirect), and *Email Me* pointed at the old personal gmail. Both corrected.
+
+**Header** only had the wordmark, so a reader on a post had no route to the tour. Rather than
+rebuild the homepage's header by hand in Wix — a second copy to keep in sync — the homepage's
+own `<nav>` is now emitted as a second custom element, `<yu-nav>` (`scripts/build-nav.py` →
+`widget/yu-nav-element.js`), and dropped into the Wix header section. One source of truth:
+edit the nav in `index.html`, rerun both build scripts, and homepage + blog change together.
+
+Three things about that are worth knowing before touching it again:
+
+- **Wix mounts the tag `<wix-default-custom-element>`** and gives no way to rename it, so the
+  script registers under that name as well as `yu-nav`.
+- **Scope the CSS on a class, not the tag.** Keyed to `yu-nav` it matched nothing and the nav
+  rendered as unstyled blue links. It now wraps the markup in `.yu-nav` and scopes to that.
+- **The editor canvas and Preview both lie here** — the canvas does not run the element, and
+  Preview serves a cached copy of the script. The published page was the only honest check.
+
+The old wordmark (`text49`) is hidden, not deleted, in case the element ever needs backing out.
+
+**Anchor landing fixed too.** `/#book` from a post used to dump you at the top of the homepage:
+the browser makes its jump before the custom element has rendered, so there is nothing to jump
+to. Both builds now watch for the target and hold the position while images above it load,
+releasing as soon as the visitor scrolls. This is what makes the header's four nav links, the
+footer's *Private tours*, and every post's closing CTA actually land. Note that
+`build-widget.py` does **not** copy `index.html`'s `<script>` — it carries its own copy of the
+nav behaviour, so a fix in one is not a fix in the other.
 
 ## Next, in order
 
-1. **Fix the footer** (see above).
-2. Posts 01, 02, 05, 08, 10 still need cover images — Codex only found 5/10. `content/drafts/
+1. Posts 01, 02, 05, 08, 10 still need cover images — Codex only found 5/10. `content/drafts/
    README.md` has the current status per post. Once images exist, the publishing method below
    is already proven and fast (no more editor UI needed).
-3. Post 10 is still blocked on Yusuf's voice note.
+2. Post 10 is still blocked on Yusuf's voice note.
+3. Not checked yet: how the new header and footer look at the mobile breakpoint. The nav hides
+   its links under 900px by design (`.navlinks{display:none}`), which leaves wordmark + button
+   — probably fine, but nobody has looked.
 
 ## How the posts were actually published
 
