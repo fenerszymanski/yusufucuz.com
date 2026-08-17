@@ -34,11 +34,15 @@ SITE = "https://www.yusufucuz.com"
 FONTS = ("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;"
          "0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Work+Sans:wght@400;500;600&display=swap")
 
+# Scope on a wrapper class, not the tag: Wix mounts this element as
+# <wix-default-custom-element>, so anything keyed to <yu-nav> would never match.
+SCOPE = ".yu-nav"
+
 # The homepage nav is sticky and rests on a divider. Inside the Wix header
 # section both are already handled by Wix, so switch them off here.
 OVERRIDES = """
-yu-nav{display:block}
-yu-nav nav{position:static;border-bottom:0;background:transparent}
+.yu-nav{display:block;width:100%}
+.yu-nav nav{position:static;border-bottom:0;background:transparent}
 """
 
 
@@ -53,7 +57,7 @@ def main():
 
     css = re.search(r"<style>(.*?)</style>", html, re.S).group(1)
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)  # see build-widget.py
-    scoped = scope_css(css, "yu-nav").strip() + OVERRIDES
+    scoped = scope_css(css, SCOPE).strip() + OVERRIDES
 
     markup = absolutise(re.search(r"<nav>.*?</nav>", html, re.S).group(0).strip())
 
@@ -76,7 +80,7 @@ def main():
         l.id = 'yu-fonts'; l.rel = 'stylesheet'; l.href = FONTS;
         (document.head || document.documentElement).appendChild(l);
       }}
-      this.innerHTML = '<style>' + CSS + '</style>' + MARKUP;
+      this.innerHTML = '<style>' + CSS + '</style><div class="yu-nav">' + MARKUP + '</div>';
     }}
   }}
 
