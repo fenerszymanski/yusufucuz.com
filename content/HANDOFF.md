@@ -1,33 +1,63 @@
-# Where we stopped — blog typography, mid-job
-
-**Nothing here is live.** The editor autosaves, but the site has not been published since the
-redirect work, so yusufucuz.com is unchanged. Publishing is what makes any of the below real.
+# Where we stopped — 5 posts published, footer still shows the old CV site
 
 ## Done
 
-- **Newsreader is uploaded to Wix.** Not in Wix's library, so I instanced the official
-  variable fonts at `opsz=16` into five static cuts (400/500/600 + italic 400/500) and fixed
-  their name tables. Files, licence and the how/why are in `assets/fonts/` — keep them, the
-  scratchpad copies are gone.
-- **Site theme font is now Work Sans**, which is the brand body face. This only affects the
-  blog: the homepage is a custom element carrying its own CSS.
+- **Typography and colour finished and published** — Newsreader headings, Work Sans body, all
+  8 Ink & Ochre colours, italic Newsreader wordmark with no underline. Verified live.
+- **5 posts published via the Wix Blog API**: 03, 04, 06, 07, 09 — the ones Codex found a
+  cover image for. Covers were Codex's candidates (5/10), resized to 1000px/q62 and pushed to
+  this repo (`assets/blog-covers/upload-optimized/`) so the Wix API could import them by URL —
+  see "How the posts were actually published" below for the full method, it's not obvious.
+  Categories created (Guest asked me, Opinion, Field notes, Craft) and assigned per post.
+  Every `(#book)` link in the drafts was rewritten to `(/#book)` before publishing — a bare
+  `#book` only works on the homepage itself; from a `/post/...` page it does nothing.
+  Live and verified, content and formatting checked directly on the published pages:
+  - yusufucuz.com/post/what-is-left-of-the-wall (03)
+  - yusufucuz.com/post/skip-the-tower (04)
+  - yusufucuz.com/post/the-twenty-minutes-before-a-tour (06)
+  - yusufucuz.com/post/berlin-is-ugly (07)
+  - yusufucuz.com/post/finding-the-photograph (09)
+  - `/blog` list view: took a few reloads to populate (pro-gallery client-side layout, not a
+    data problem — the posts were correct in the API and on their own pages the whole time).
+    If it ever looks empty again after a publish, it's almost certainly this, not broken data.
+
+## New problem found while checking this — not fixed yet
+
+**The blog/post pages have a footer with the old CV-site links**: Home · CV · Portfolio ·
+My LinkedIn · Email Me · Contact. Same species of bug as the header was two sessions ago, just
+the footer this time — nobody caught it because the header fix didn't touch it. The links
+aren't 404s (they redirect to `/`), so nothing is broken, but it's a visible, off-brand
+leftover on every post page. Only seen on Wix-native pages (`/blog`, `/post/...`); the
+homepage has no header *or* footer, it's a custom element. Worth the same treatment as the
+header — hasn't been scoped or started.
 
 ## Next, in order
 
-1. **Finish the font cleanup.** The *first* upload round produced five badly-named files
-   (all showing "Newsreader 16 Pt Regular"). I deleted one; **four remain**. Delete them in
-   Site Styles → Typography → font dropdown → Upload fonts → trash icon, then upload the five
-   correct files from `assets/fonts/`. They should then appear as one Newsreader family with
-   Regular / Medium / SemiBold / Italic / Medium Italic.
-2. **Set Heading 1–6 to Newsreader.** Site Styles → Typography → pencil icon on each heading →
-   Font. Paragraph 1–3 stay Work Sans. I had the Heading 1 panel open when we stopped.
-3. **Colours.** Site Styles → Colors, to the Ink & Ochre palette:
-   paper `#FBF8F1`, sand `#F0E7D6`, line `#E4DBC9`, muted `#6B6357`, ink `#1C1A15`,
-   ochre `#B0782A`. BerlinWalk green `#1B5E20` as an accent only, never the main colour.
-4. **Turn off the underline on the blog wordmark** — it is default link styling.
-5. **Publish**, then check `/blog` live.
-6. Then posts: Codex is finding images; publication order is in `content/drafts/README.md`
-   (01 first). The Wix Blog API is confirmed working as a route — see the section below.
+1. **Fix the footer** (see above).
+2. Posts 01, 02, 05, 08, 10 still need cover images — Codex only found 5/10. `content/drafts/
+   README.md` has the current status per post. Once images exist, the publishing method below
+   is already proven and fast (no more editor UI needed).
+3. Post 10 is still blocked on Yusuf's voice note.
+
+## How the posts were actually published
+
+Not the Studio editor UI — the Wix Blog REST API, end to end. Worth recording because two
+parts of it were not obvious:
+
+- **Images**: `UploadImageToWixSite` takes a local file as base64, but base64-encoding these
+  images blew past hundreds of thousands of tokens for a single ~150KB file — unusable. The
+  browser-upload path (`file_upload` on Wix's Media Manager) turned out to target the wrong
+  input; the real one lives inside the `mediaGalleryFrame` iframe, not reachable through
+  `read_page`/`find`. What worked: push the (resized, optimized) images to this GitHub repo,
+  then pass the raw.githubusercontent.com URLs to `UploadImageToWixSite`'s `imageUrls` param.
+  Only did this with Yusuf's explicit go-ahead, scoped to just the 5 image files.
+- **Body content**: the Ricos Converter Service (`POST /ricos/v1/ricos-document/convert/
+  to-ricos`) turns Markdown straight into valid Ricos JSON — headings, bold, italic, links,
+  nested bold+italic (book titles) all came out right. Far less error-prone than hand-authoring
+  the Ricos node tree.
+- **Everything else**: `POST /blog/v3/bulk/draft-posts/create` with `publish:false` first, so
+  the drafts could be opened and visually checked in the dashboard before going live, then
+  `POST /blog/v3/draft-posts/{id}/publish` per post once confirmed.
 
 ---
 
