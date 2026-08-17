@@ -346,6 +346,35 @@
       if(!hash) return;
       if(go(hash)) e.preventDefault();
     });
+
+    // Landing from somewhere else (e.g. /#book from a blog post). The browser
+    // makes its own jump before this custom element has rendered, so it lands
+    // on nothing. Watch for the target, then hold the position while images
+    // above it load and shove it down — but let go the moment the visitor
+    // scrolls, so we never yank the page out from under them.
+    (function(){
+      var hash = window.location.hash;
+      if(!hash || hash.length < 2) return;
+      var target = null, placed = 0, giveUp = Date.now() + 6000;
+      function yFor(el){
+        return Math.max(0, el.getBoundingClientRect().top + (window.pageYOffset || 0) - NAV_OFFSET);
+      }
+      function settle(){
+        if(Math.abs((window.pageYOffset || 0) - placed) > 4) return; // visitor took over
+        placed = yFor(target);
+        window.scrollTo(0, placed);
+      }
+      (function attempt(){
+        try { target = document.querySelector(hash); } catch(err){ return; }
+        if(target){
+          placed = yFor(target);
+          window.scrollTo(0, placed);
+          [250, 700, 1400].forEach(function(ms){ setTimeout(settle, ms); });
+          return;
+        }
+        if(Date.now() < giveUp) setTimeout(attempt, 100);
+      })();
+    })();
   })();
 
   (function(){
