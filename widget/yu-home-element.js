@@ -55,6 +55,28 @@
         glide(Math.max(0, y));
         e.preventDefault();
       });
+
+      // Arriving from elsewhere (e.g. /#book from a blog post): the browser
+      // makes its own jump before this element has rendered, so it lands on
+      // nothing. Go there now that we exist, and hold the spot while images
+      // above it load and push it down — letting go the moment the visitor
+      // scrolls, so we never yank the page out from under them.
+      const landing = window.location.hash;
+      if (landing && landing.length > 1) {
+        let target = null;
+        try { target = root.querySelector(landing); } catch (err) { target = null; }
+        if (target) {
+          const yFor = () => Math.max(
+            0, target.getBoundingClientRect().top + (window.pageYOffset || 0) - NAV_OFFSET);
+          let placed = yFor();
+          window.scrollTo(0, placed);
+          [250, 700, 1400].forEach((ms) => setTimeout(() => {
+            if (Math.abs((window.pageYOffset || 0) - placed) > 4) return; // visitor took over
+            placed = yFor();
+            window.scrollTo(0, placed);
+          }, ms));
+        }
+      }
     }
 
     _wireForm() {
