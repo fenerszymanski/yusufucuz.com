@@ -1,4 +1,37 @@
-# Where we stopped — 2026-08-17
+# Where we stopped — 2026-08-17 (second session)
+
+## Done since the first handoff
+
+- **The blog header is fixed and live.** The old CV-site header is gone from `/blog`:
+  the wordmark now reads **Yusuf Ucuz** and links to the homepage, and both old menus
+  (Portfolio/CV/Contact had already been auto-removed with their pages; I deleted the
+  remaining *My LinkedIn*, *Download CV (PDF)* and *Email Me*). Published and verified live.
+  Note: the strings still appear in the page source as leftover menu *data*; nothing renders.
+- **Redirects: not done, and the panel is the reason.** See below.
+
+## Still open
+
+1. **The five 301 redirects could not be created.** Wix's URL Redirect Manager will not
+   persist anything from this browser: the Add-redirect dialog opens, accepts both fields,
+   and `Save` / `Save & Add Another` silently do nothing — the list stays at four. I tried
+   keyboard-only entry, autocomplete selection, and the CSV import path (its dialog would
+   not open at all). This is the same class of failure as the Wix automation panel earlier
+   in the project. **It is a two-minute job by hand:** Marketing → SEO & GEO → URL Redirect
+   Manager → New Redirect, five times:
+   `/portfolio`, `/cv`, `/contact`, `/cv-cm`, `/cv-gm` → `/`
+   While there, repoint the four stale ones, which still target the deleted pages:
+   `/blank`, `/blank-1`, `/cv-1`, `/cv-cm-1` → `/`
+2. Alternative if the redirects stay undone: the soft-404 can be turned into a real 404 via
+   the SEO User Config API (`shouldUsePartialRouteMatch: false`). Redirects are better for
+   the three URLs that were in the sitemap; the 404 switch is the fallback.
+3. **Blog styling** is still stock Wix, not Ink & Ochre. The wordmark also renders underlined,
+   which is just default link styling and should be turned off.
+4. **First post** not published yet — draft 03 is the one to run.
+5. Draft 10 still needs Yusuf's voice note.
+
+---
+
+# First handoff — 2026-08-17
 
 Site: Wix **Studio** site "Yusuf Ucuz", metaSiteId `916bf0bd-d8d5-4282-a34a-8aa80bfd8afc`.
 Editor opens via `https://manage.wix.com/editor/916bf0bd-d8d5-4282-a34a-8aa80bfd8afc`
