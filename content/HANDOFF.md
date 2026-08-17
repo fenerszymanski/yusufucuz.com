@@ -1,4 +1,37 @@
-# Where we stopped — 2026-08-17 (second session)
+# Where we stopped — blog typography, mid-job
+
+**Nothing here is live.** The editor autosaves, but the site has not been published since the
+redirect work, so yusufucuz.com is unchanged. Publishing is what makes any of the below real.
+
+## Done
+
+- **Newsreader is uploaded to Wix.** Not in Wix's library, so I instanced the official
+  variable fonts at `opsz=16` into five static cuts (400/500/600 + italic 400/500) and fixed
+  their name tables. Files, licence and the how/why are in `assets/fonts/` — keep them, the
+  scratchpad copies are gone.
+- **Site theme font is now Work Sans**, which is the brand body face. This only affects the
+  blog: the homepage is a custom element carrying its own CSS.
+
+## Next, in order
+
+1. **Finish the font cleanup.** The *first* upload round produced five badly-named files
+   (all showing "Newsreader 16 Pt Regular"). I deleted one; **four remain**. Delete them in
+   Site Styles → Typography → font dropdown → Upload fonts → trash icon, then upload the five
+   correct files from `assets/fonts/`. They should then appear as one Newsreader family with
+   Regular / Medium / SemiBold / Italic / Medium Italic.
+2. **Set Heading 1–6 to Newsreader.** Site Styles → Typography → pencil icon on each heading →
+   Font. Paragraph 1–3 stay Work Sans. I had the Heading 1 panel open when we stopped.
+3. **Colours.** Site Styles → Colors, to the Ink & Ochre palette:
+   paper `#FBF8F1`, sand `#F0E7D6`, line `#E4DBC9`, muted `#6B6357`, ink `#1C1A15`,
+   ochre `#B0782A`. BerlinWalk green `#1B5E20` as an accent only, never the main colour.
+4. **Turn off the underline on the blog wordmark** — it is default link styling.
+5. **Publish**, then check `/blog` live.
+6. Then posts: Codex is finding images; publication order is in `content/drafts/README.md`
+   (01 first). The Wix Blog API is confirmed working as a route — see the section below.
+
+---
+
+# Earlier — 2026-08-17 (second session)
 
 ## Done since the first handoff
 
