@@ -21,7 +21,14 @@
     }
   }
 
-  if (window.customElements && !customElements.get('yu-nav')) {
-    customElements.define('yu-nav', YuNav);
+  if (!window.customElements) return;
+  if (!customElements.get('yu-nav')) customElements.define('yu-nav', YuNav);
+
+  // Wix's Custom Element widget mounts the tag <wix-default-custom-element>
+  // and gives no way to change it, so register under that name too — a
+  // subclass, because one class cannot be registered twice. Safe here: the
+  // header is the only place on the blog pages using a custom element.
+  if (!customElements.get('wix-default-custom-element')) {
+    customElements.define('wix-default-custom-element', class extends YuNav {});
   }
 })();
