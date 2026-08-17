@@ -3,7 +3,7 @@ title: "What 26 reviews taught me, including the one that stung"
 slug: what-26-reviews-taught-me
 series: Craft
 status: ready
-words: ~1100
+words: ~950
 notes: >
   Ratings read from FreeTour on 16 Aug 2026: 9.8 overall across 26 reviews,
   Organisation 9.9, Atmosphere 9.9, Content 10.0, Guide 9.9, Usefulness 9.8.
@@ -36,7 +36,7 @@ I designed the route that way because it was the history I actually wanted to te
 
 Small groups. I thought of them as bad mornings.
 
-The reviews disagree, clearly and repeatedly. The warmest ones are from the smallest tours, and several of them name the size as the reason. One says there were three of them and that this made it *"very intimate and interesting."* Another pair arrived to discover everyone else had cancelled and I ran the tour anyway, and they wrote one of the longest reviews I have.
+The reviews disagree, clearly and repeatedly. The warmest ones are from the smallest tours, and several of them name the size as the reason. One says there were three of them and that this made it *"very intimate and interesting."* Another pair found themselves on a tour with only two guests, and they wrote one of the longest reviews I have.
 
 So the mornings I was quietly counting as failures are the ones producing my best work. I have written about what that changed elsewhere. It is the single most useful thing this exercise gave me.
 
@@ -68,10 +68,10 @@ Three things.
 
 **I say when I do not know.** It costs nothing, and it makes everything else I say more credible.
 
-**I added introductions.** Guests wanted the group to introduce itself at the start. I had been meeting people one by one instead. They were right, and it was not my idea.
+**I treat a small group as its own format.** I no longer give two people the same performance I would have given twenty. I leave more room for questions and let those questions change the order.
 
 None of that is a marketing insight. It is what twenty-six people told me, once I read what they wrote instead of the number at the top.
 
 ---
 
-*You can read all of them, including the critical ones, on my [FreeTour listing](https://www.freetour.com/berlin/berlin-behind-the-landmarks-a-walk-through-power-faith-change). Or [tell me what your group wants](#book) and I will build a private walk around it.*
+*You can read all of the reviews, including the critical ones, on my [FreeTour listing](https://www.freetour.com/berlin/berlin-behind-the-landmarks-a-walk-through-power-faith-change).*

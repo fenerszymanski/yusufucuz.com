@@ -28,16 +28,17 @@ Two standing constraints from him:
 | 01 | Why I left marketing to walk people around Berlin | Career | **Ready** |
 | 02 | What a free tour actually costs | Craft | **Ready** |
 | 03 | What is left of the Wall, and why my tour does not go there | Guest asked me | **Ready** |
-| 04 | Skip the tower: three better ways to spend the same two hours | Opinion | Ready — re-check Reichstag registration rules |
+| 04 | Skip the tower: three better ways to spend the same two hours | Opinion | **Ready** — official visitor page checked 17 Aug 2026 |
 | 05 | Talking to twenty people, and talking to two | Craft | **Ready** |
-| 06 | The twenty minutes before a tour starts | Field notes | Ready — verify the World Clock details |
+| 06 | The twenty minutes before a tour starts | Field notes | **Ready** — unconfirmed scene details removed |
 | 07 | Berlin is ugly, and that is the point | Opinion | **Ready** |
-| 08 | What 26 reviews taught me, including the one that stung | Craft | Ready — re-check the review count on the day |
+| 08 | What 26 reviews taught me, including the one that stung | Craft | Ready — re-check only the moving review count on publication day |
 | 09 | Finding the photograph that makes 1780 visible | Craft | **Ready** |
 | 10 | Learning to say I don't know | Guest asked me | **Blocked** — needs the voice note |
 
-Publication order: **01, 02, 03, 07, 06, 04, 05, 09, 08, 10.** Ten runs first because it is
-the cornerstone; 10 runs last because a guide admitting ignorance needs the other nine behind it.
+Publication order: **01, 03, 02, 05, 07, 06, 04, 09, 08, 10.** Post 01 introduces Yusuf;
+03 then establishes the tour's clearest difference. Post 10 runs last because a guide admitting
+ignorance needs the other nine behind it.
 
 ## What changed after the interview
 

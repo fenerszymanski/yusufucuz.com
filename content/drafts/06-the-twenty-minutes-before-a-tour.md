@@ -3,7 +3,7 @@ title: "The twenty minutes before a tour starts"
 slug: the-twenty-minutes-before-a-tour
 series: Field notes
 status: ready
-words: ~800
+words: ~500
 notes: >
   Meeting point, umbrella, opening line and the waiting thought all confirmed.
   The no-show anxiety section was cut — no-shows are not a real problem for him.
@@ -16,23 +16,17 @@ Nobody books this part. It is not in the listing and it is not in anyone's photo
 
 ## The clock
 
-I meet people at Alexanderplatz, at the Weltzeituhr, the World Clock. If you have been to Berlin you have stood near it without meaning to. It is a rotating steel drum listing time zones, propped on a column, built by the GDR to say something about a country that was very interested in being taken seriously internationally and not very free to travel.
+I meet people at Alexanderplatz, at the Weltzeituhr, the World Clock. Designed by Erich John during the socialist redesign of the square, it was installed in 1969. Its rotating cylinder shows the world's time zones.
 
-It has outlived the state that put it there and quietly become the thing that state would have least expected: the place where the whole city says *meet me at.* Tour groups, teenagers, first dates, protests forming up. It does more work now than it ever did as propaganda.
+It has outlived the state that put it there and remains one of Alexanderplatz's most recognisable meeting points. I like starting beside a GDR object that still has an ordinary job in the city.
 
 I get there about twenty minutes early and stand near the base of it, facing the TV tower.
 
 ## Waiting
 
-The first thing I do is read the sky, because it sets the shape of the next two hours. Rain does not cancel a tour. It changes the pacing, shortens the outdoor stops, and thins out the group.
+The first thing I do is make myself visible. I hold a green umbrella. Whether it rains or not, the umbrella is not for the weather. It gives people one simple thing to look for in a square where several groups may be gathering at once.
 
-Then I make myself visible on purpose. I hold a green umbrella. Whether it rains or not, the umbrella is not for the weather.
-
-People approach in a very particular way. They walk past once, look sideways, then circle back. Almost nobody opens with "are you the tour?" They say "hello?" as a question, and I have learned to answer before they finish, because that half-second of uncertainty is the first impression and it costs nothing to remove.
-
-The early arrivals are always the same kinds of people. Someone anxious about being late. Someone who has done three cities this week and would like to sit down. A couple who booked separately and are not sure this is the right clock. Someone who has been standing ten metres away for a while, waiting to be certain.
-
-I try to learn two names before we start. Not everyone's. Two. If I use a name in the first ten minutes, the group stops being an audience.
+Then I wait. The number of people in front of me will change the delivery: a large group needs projection and structure; a small one can become a conversation. But the question in my head is the same either way.
 
 ## The thing I am actually thinking about
 
@@ -46,8 +40,6 @@ There is no version of this job where you have banked enough credit to have an o
 
 ## Starting
 
-Then I stop thinking and start looking. Who is cold. Who is on their phone, which tells me how hard the opening will have to work. Who has already mentioned that they teach history, always apologetically, always usefully.
-
 And then I introduce myself. Not a joke, not a hook, not a question to the group. My name, where I am from, what we are about to do and roughly how long it will take.
 
 I used to think that was the boring option. I have come to think it is the only honest one. Everything I am going to spend the next two hours doing depends on these people believing me, and you do not start that by performing.
@@ -56,4 +48,4 @@ After the first sentence the twenty minutes are gone, and I do not think about a
 
 ---
 
-*I run this walk through Berlin's historic centre, and private tours for people who want it built around them. [Details here](#book).*
+*The public walk starts here at the World Clock. [Details and current availability](#book).*

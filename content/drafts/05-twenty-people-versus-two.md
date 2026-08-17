@@ -3,7 +3,7 @@ title: "Talking to twenty people, and talking to two"
 slug: twenty-people-versus-two
 series: Craft
 status: ready
-words: ~1000
+words: ~800
 notes: >
   Replaces the killed "how I plan a private tour" piece — Yusuf has not run one,
   so that article would have been invented experience. Everything here comes from
@@ -38,7 +38,7 @@ For a while I thought of the small tours as the bad days. Fewer people, a thinne
 
 Then I read my reviews properly.
 
-The tours guests describe most warmly are not the big ones. They are the small ones, and they say so explicitly. One review says there were only three of them, and that this made it *"very intimate and interesting."* Another simply notes the group was small and that it was very nice. One pair turned up to find they were the only two people who had not cancelled, and the review they left afterwards is one of the most detailed I have.
+The tours guests describe most warmly are not the big ones. They are the small ones, and they say so explicitly. One review says there were only three of them, and that this made it *"very intimate and interesting."* Another simply notes the group was small and that it was very nice. One pair found themselves on a tour with only two guests, and the review they left afterwards is one of the most detailed I have.
 
 So the mornings I experienced as failures are, from the other side, the best version of the thing I sell. That was an uncomfortable discovery and it changed how I run the small ones. They are no longer the tour I would have given to twenty people, delivered to three. They are their own thing, and I now open them differently.
 

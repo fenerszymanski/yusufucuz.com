@@ -3,7 +3,7 @@ title: "Finding the photograph that makes 1780 visible"
 slug: finding-the-photograph
 series: Craft
 status: ready
-words: ~1050
+words: ~900
 notes: >
   Reframed from a reading list to the photographs-and-maps technique, which is
   what guests actually praise and which appears nowhere on the site. Only two
@@ -64,16 +64,12 @@ I would rather say that plainly than let a reading list imply otherwise. It mean
 
 What I can do is be careful, be explicit about what I do not know, and keep the standard for what earns a place in the two hours high enough that nobody has to take my word for anything.
 
-## The week before
+## What the preparation is for
 
-The routine, every time, is short:
+None of this is visible on the tour, and it should not be. The point is not to show people how much preparation happened. It is to make one vanished street or one changed square understandable without turning the stop into a lecture.
 
-1. **Check what has physically changed.** Berlin renovates constantly. Turning up to a scaffolded building with a group is the most avoidable failure in this job.
-2. **Re-check one thing I have been saying for months.** One, chosen at random.
-3. **Read something outside the route.** The questions never come from inside it.
-
-None of that is visible on the tour, and it should not be. But it is the difference between a guide who is charming and a guide who is worth two hours of your one weekend here.
+The image earns its place only if it helps someone see what is in front of them differently. If it needs a long explanation before it becomes useful, it stays out of the bag.
 
 ---
 
-*If there is a subject you want to go deep on, [tell me before you book](#book) and I will do the reading for your group specifically.*
+*The photographs and maps are part of my regular historic-centre walk. [See what the route covers](#book).*

@@ -3,7 +3,7 @@ title: "Skip the tower: three better ways to spend the same two hours"
 slug: skip-the-tower
 series: Opinion
 status: ready
-words: ~950
+words: ~750
 notes: >
   Only one "skip" — the Fernsehturm platform — because that is the only one Yusuf
   actually endorsed. Constructive tone, at his request. Reichstag dome requires
@@ -24,7 +24,7 @@ You queue, you pay a real amount of money, you go up, and then you look out over
 
 Berlin is flat and mostly low. From two hundred metres it reads as a wide grey-green carpet with a few landmarks poking through it, and unless you already know what you are looking at, it is difficult to make it mean anything. The skyline that would justify the ticket is not there, because this city built outwards and twice over rather than upwards.
 
-The tower itself, meanwhile, is genuinely one of the best things in the centre, and it is completely free to look at. It was built by a state that wanted to demonstrate what socialism could do, and in bright sunshine the curved steel of the sphere throws a cross of light across the city, which was not in the plan and could not be designed away. There is a whole story there about intention and consequence, and you can hear all of it standing on the ground with your hands in your pockets.
+The tower itself, meanwhile, is genuinely one of the best things in the centre, and it is completely free to look at. It was built by the GDR as both broadcasting infrastructure and a highly visible symbol of the capital. In bright sunshine, the reflection on the sphere can form a cross, an effect Berliners gave their own names and stories. The object and the city around it are more interesting to me than the view from inside it.
 
 So: look at the tower. I would not pay to stand inside it.
 
@@ -32,15 +32,15 @@ So: look at the tower. I would not pay to stand inside it.
 
 ### The Topography of Terror
 
-Free, outdoors, and built on the excavated cellars of the buildings that housed the Gestapo and the SS. There is also an original stretch of Wall along the edge of the site, unrestored and battered.
+Free, with indoor and outdoor exhibitions, on the site where the Gestapo, SS leadership and Reich Security Main Office had their headquarters. There is also a surviving stretch of the Berlin Wall along the edge of the grounds.
 
 It is the most serious place in central Berlin and it asks something of you. Allow an hour, more if you read properly. Nothing about it is designed to be enjoyable, which is exactly right.
 
 ### The Reichstag dome
 
-Free, but you have to register in advance, so it needs a small amount of planning. It is worth it for two reasons. The view is the one the tower's platform should have been: you are in the middle of the government quarter, low enough to read the streets. And the dome is an argument in glass. You walk up a spiral above the parliamentary chamber and look down on the politicians, which is not an accident of design.
+Free and normally available with prior registration, although access can change with parliamentary business, weather and security conditions. It is worth planning for two reasons. You are in the middle of the government quarter, low enough to read the streets, and the building makes a visible argument about public access to parliament.
 
-Check the current registration rules before you go, since they change.
+Check the [Bundestag's official visitor page](https://www.bundestag.de/en/visittheBundestag/dome/registration-245686) before making it part of your day; registration does not guarantee that the dome will be open.
 
 ### One museum on Museum Island, done properly
 

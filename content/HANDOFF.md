@@ -7,27 +7,32 @@
   (Portfolio/CV/Contact had already been auto-removed with their pages; I deleted the
   remaining *My LinkedIn*, *Download CV (PDF)* and *Email Me*). Published and verified live.
   Note: the strings still appear in the page source as leftover menu *data*; nothing renders.
-- **Redirects: not done, and the panel is the reason.** See below.
+- **All nine redirects fixed and verified live.** The panel *does* work through the browser —
+  the fix was clicking the Save button by element reference rather than by screen coordinate;
+  coordinate clicks were silently landing on nothing (no network request fired at all).
+  Once clicked correctly, each save is a real `POST …/redirector-server/v1/redirect` → 200.
+  Live-checked with `curl -L` on all nine: `/portfolio`, `/cv`, `/contact`, `/cv-cm`, `/cv-gm`,
+  `/blank`, `/blank-1`, `/cv-1`, `/cv-cm-1` — every one now resolves to `https://www.yusufucuz.com/`.
+  One near-miss worth knowing about: the New URL field is an autocomplete combobox, and if you
+  set it then click Save while its suggestion dropdown is still open, the click can land on a
+  suggestion instead — silently swapping your typed value for an unrelated page. Always click
+  elsewhere to close the dropdown and re-read the field before saving.
+- Wix Blog REST API confirmed working for this site (`www.wixapis.com/blog/v3/...` with the
+  existing `berlinwalk-wix-api-key` + `wix-site-id: 916bf0bd-…`) — `GET /blog/v3/posts` returns
+  200. Draft-post creation not yet attempted; see Open item 3.
 
 ## Still open
 
-1. **The five 301 redirects could not be created.** Wix's URL Redirect Manager will not
-   persist anything from this browser: the Add-redirect dialog opens, accepts both fields,
-   and `Save` / `Save & Add Another` silently do nothing — the list stays at four. I tried
-   keyboard-only entry, autocomplete selection, and the CSV import path (its dialog would
-   not open at all). This is the same class of failure as the Wix automation panel earlier
-   in the project. **It is a two-minute job by hand:** Marketing → SEO & GEO → URL Redirect
-   Manager → New Redirect, five times:
-   `/portfolio`, `/cv`, `/contact`, `/cv-cm`, `/cv-gm` → `/`
-   While there, repoint the four stale ones, which still target the deleted pages:
-   `/blank`, `/blank-1`, `/cv-1`, `/cv-cm-1` → `/`
-2. Alternative if the redirects stay undone: the soft-404 can be turned into a real 404 via
-   the SEO User Config API (`shouldUsePartialRouteMatch: false`). Redirects are better for
-   the three URLs that were in the sitemap; the 404 switch is the fallback.
-3. **Blog styling** is still stock Wix, not Ink & Ochre. The wordmark also renders underlined,
+1. **Blog styling** is still stock Wix, not Ink & Ochre. The wordmark also renders underlined,
    which is just default link styling and should be turned off.
-4. **First post** not published yet — draft 03 is the one to run.
-5. Draft 10 still needs Yusuf's voice note.
+2. **First post** not published yet. Publication order per `content/drafts/README.md` (now
+   updated by Yusuf's own pass): **01, 03, 02, 05, 07, 06, 04, 09, 08, 10.**
+3. **Publishing route undecided: Wix Blog API vs. the Studio editor's blog UI.** The API works
+   (see above) and would let posts be created straight from the markdown drafts — worth trying
+   for post 01 next: `POST /blog/v3/draft-posts` (needs a `memberId` — check Yusuf's site
+   collaborator/member ID first), then `POST /blog/v3/draft-posts/{id}/publish`. Fall back to
+   the editor's blog UI if the API path has a snag (e.g. rich-content format for the post body).
+4. Draft 10 still needs Yusuf's voice note.
 
 ---
 
@@ -72,8 +77,8 @@ Editor opens via `https://manage.wix.com/editor/916bf0bd-d8d5-4282-a34a-8aa80bfd
    Repoint all four to `/`.
 4. **Style the blog** to Ink & Ochre: Newsreader (display) + Work Sans (body), paper `#FBF8F1`,
    sand `#F0E7D6`, ink `#1C1A15`, ochre `#B0782A`. BerlinWalk green `#1B5E20` as accent only.
-5. **Publish the first post**: draft 03, *What is left of the Wall, and why my tour does not go
-   there* — it is the most ready of the ten.
+5. **Publish the first post**: draft 01, *Why I left marketing to walk people around Berlin*.
+   Follow it with draft 03, which establishes the tour's clearest difference.
 6. **Draft 10 is still blocked** on Yusuf's voice note: which stop he was standing at, who asked,
    the question he could not answer, what he said, and what the group did in the silence.
 

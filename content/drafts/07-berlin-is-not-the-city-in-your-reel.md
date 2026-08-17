@@ -3,7 +3,7 @@ title: "Berlin is ugly, and that is the point"
 slug: berlin-is-ugly
 series: Opinion
 status: ready
-words: ~950
+words: ~700
 notes: >
   Thesis changed at Yusuf's direction: the real target is trying to consume the
   city in three days, not the reels themselves. "Berlin is ugly" is the complaint
@@ -32,11 +32,11 @@ I have watched this happen to intelligent people who read three books before the
 
 Here is the part I would want you to take away.
 
-Cities that photograph beautifully mostly photograph beautifully because they were spared. Berlin looks the way it does because of what happened to it, and the things that make it unremarkable to the eye are the evidence.
+Some European city centres offer a more continuous historical picture. Berlin does not. War damage, demolition, division and competing ideas about rebuilding all sit beside each other here, and many of the things that look unremarkable at first are part of that evidence.
 
-That empty lot in the middle of the centre is empty for a reason. That row of buildings does not match because there is a gap in it where something was bombed and what replaced it was built fast, cheap, and to a different idea of what a building is for. That absurdly wide road exists because someone was planning a capital city that was never finished. That plain concrete block is plain because it was put up by a state that had decided ornament was a lie told by the rich.
+An empty lot, a mismatched row of buildings or an unusually wide road may carry the trace of bombing, demolition, division or a plan that was only partly completed. You cannot know which story applies just by looking. That is precisely why slowing down matters.
 
-The whole twentieth century is legible in the streetscape, in order, if you are standing still long enough to read it.
+Parts of the twentieth century become legible in the streetscape if you stand still long enough to ask why one piece does not match the next.
 
 That is not a consolation prize for a city that failed to be attractive. It is a better experience than being impressed by a facade, and it is why I do this work here rather than somewhere prettier.
 
@@ -58,4 +58,4 @@ Just do not build three days around finding four seconds of somebody else's.
 
 ---
 
-*My walk is two hours and covers less ground than you would expect, on purpose. [Details here](#book).*
+*My walk covers less ground than many Berlin itineraries, on purpose. It begins with the city that existed before the familiar twentieth-century story. [Read what the walk covers](#book).*
