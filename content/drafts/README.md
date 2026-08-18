@@ -25,14 +25,14 @@ Two standing constraints from him:
 
 | # | Title | Series | Status |
 |---|-------|--------|--------|
-| 01 | Why I left marketing to walk people around Berlin | Career | **Ready** — no cover image yet |
-| 02 | What a free tour actually costs | Craft | **Ready** — no cover image yet |
+| 01 | Why I left marketing to walk people around Berlin | Career | **Published** — yusufucuz.com/post/why-i-left-marketing |
+| 02 | What a free tour actually costs | Craft | **Published** — yusufucuz.com/post/what-a-free-tour-actually-costs |
 | 03 | What is left of the Wall, and why my tour does not go there | Guest asked me | **Published** — yusufucuz.com/post/what-is-left-of-the-wall |
 | 04 | Skip the tower: three better ways to spend the same two hours | Opinion | **Published** — yusufucuz.com/post/skip-the-tower |
-| 05 | Talking to twenty people, and talking to two | Craft | **Ready** — no cover image yet |
+| 05 | Talking to twenty people, and talking to two | Craft | **Published** — yusufucuz.com/post/twenty-people-versus-two |
 | 06 | The twenty minutes before a tour starts | Field notes | **Published** — yusufucuz.com/post/the-twenty-minutes-before-a-tour |
 | 07 | Berlin is ugly, and that is the point | Opinion | **Published** — yusufucuz.com/post/berlin-is-ugly |
-| 08 | What 26 reviews taught me, including the one that stung | Craft | **Ready** — no cover image yet, re-check the moving review count |
+| 08 | What 26 reviews taught me, including the one that stung | Craft | **Published** — yusufucuz.com/post/what-26-reviews-taught-me (numbers re-verified on FreeTour 18 Aug: 9.8 / 26 reviews, unchanged) |
 | 09 | Finding the photograph that makes 1780 visible | Craft | **Published** — yusufucuz.com/post/finding-the-photograph |
 | 10 | Learning to say I don't know | Guest asked me | **Blocked** — needs the voice note |
 

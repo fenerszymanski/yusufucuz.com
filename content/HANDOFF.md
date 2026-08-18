@@ -126,6 +126,38 @@ Two small fixes, both live and verified:
    is already proven and fast (no more editor UI needed).
 2. Post 10 is still blocked on Yusuf's voice note.
 
+## Second batch — posts 01, 02, 05, 08 published (all 9 now live)
+
+Codex delivered the remaining covers, so the four ready posts went out the same
+way as the first five. Now live:
+
+- yusufucuz.com/post/why-i-left-marketing (01, new **Career** category)
+- yusufucuz.com/post/what-a-free-tour-actually-costs (02, Craft)
+- yusufucuz.com/post/twenty-people-versus-two (05, Craft)
+- yusufucuz.com/post/what-26-reviews-taught-me (08, Craft)
+
+Three things worth knowing for next time (post 10, when the voice note lands):
+
+- **The URL slug field is `seoSlug`, not `slug`.** Passing `draftPost.slug` on
+  create is silently ignored and Wix generates a long slug from the title. Set
+  `draftPost.seoSlug` on create (works), or fix an existing post by PATCHing the
+  draft with `{draftPost:{id, seoSlug}, action:"UPDATE_PUBLISH"}`. 01 and 05 had
+  to be corrected this way after the fact; 08 used seoSlug on create and was right
+  first time.
+- **Post 08's numbers were re-verified live before publishing.** The draft flagged
+  "the count moves" — checked the FreeTour listing on 18 Aug: still 9.8 across 26
+  reviews, category scores unchanged, so it shipped as written.
+- **Post 08 has no `#book` CTA.** Unlike the other eight it closes on the FreeTour
+  listing link — that is how the draft was written (the piece is about the reviews),
+  and it was left as-is rather than inventing a CTA.
+- **A `Career` category was created** for post 01 (id 2fd1595a-3ba3-440b-a36b-341698e19f3f).
+  The blog filter bar now reads: Guest asked me · Opinion · Field notes · Craft · Career.
+
+Covers were fetched via `fetch()` inside ExecuteWixAPI at first, but that sandbox
+blocks raw.githubusercontent.com — so the drafts were cleaned locally, the body
+inlined into the ExecuteWixAPI code as a JSON string literal, and convert→create→
+publish run server-side in one call (keeps the big richContent off the wire).
+
 ## How the posts were actually published
 
 Not the Studio editor UI — the Wix Blog REST API, end to end. Worth recording because two
