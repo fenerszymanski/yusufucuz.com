@@ -77,10 +77,11 @@
   #private{padding:66px 28px}
   .story{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .story-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:46px;align-items:center}
-  .story .photo{aspect-ratio:4/3;border-radius:8px;overflow:hidden;border:1px solid var(--line);position:relative}
-  .story .photo img{width:100%;height:100%;object-fit:cover}
-  .story .photo figcaption{position:absolute;left:12px;bottom:12px;background:#fbf8f1ee;color:var(--muted);
-    font-size:11.5px;letter-spacing:.5px;padding:5px 11px;border-radius:5px;font-weight:500}
+  /* Story gallery: one wide shot + a row of three, all at the tour photos'
+     native 3:2-ish ratio so object-fit barely crops (faces stay whole). */
+  .story-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .story-gallery img{width:100%;aspect-ratio:770/420;object-fit:cover;border-radius:6px;border:1px solid var(--line);display:block}
+  .story-gallery .g-hero{grid-column:1 / -1;border-radius:8px}
   .story blockquote{font-size:25px;line-height:1.46;font-weight:400;margin:14px 0 16px;color:var(--ink)}
   .sign{font-size:32px;color:var(--ochre)}
 
@@ -204,10 +205,12 @@
 </header>
 
 <section class="story" id="story"><div class="wrap story-grid">
-  <figure class="photo">
-    <img src="assets/guests.jpg" alt="Yusuf with a group of guests on tour in Berlin" loading="lazy">
-    <figcaption>On tour with my guests</figcaption>
-  </figure>
+  <div class="story-gallery">
+    <img class="g-hero" src="assets/story/hero.jpg" width="800" height="436" loading="lazy" alt="Yusuf with a group of guests after a tour in Berlin">
+    <img src="assets/story/g1.jpg" width="320" height="175" loading="lazy" alt="Yusuf guiding guests in front of the Rotes Rathaus">
+    <img src="assets/story/g2.jpg" width="320" height="175" loading="lazy" alt="The Berliner Dom and the TV Tower on an autumn walk">
+    <img src="assets/story/g3.jpg" width="320" height="175" loading="lazy" alt="The Altes Museum on Museum Island at golden hour">
+  </div>
   <div>
     <span class="eyebrow">Hello, I'm Yusuf</span>
     <blockquote class="fr">I spent ten years in digital marketing, and towards the end of it I was selling something nobody needed. I moved to Berlin in 2023, spent a long time walking and reading it, and at the start of 2026 I gave my first tour. There were three people.</blockquote>
