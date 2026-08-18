@@ -1,4 +1,4 @@
-# Where we stopped — 5 posts live, header and footer standardised
+# Where we stopped — 5 posts live, header and footer standardised, footer fixed on mobile
 
 ## Done
 
@@ -58,35 +58,42 @@ footer's *Private tours*, and every post's closing CTA actually land. Note that
 `build-widget.py` does **not** copy `index.html`'s `<script>` — it carries its own copy of the
 nav behaviour, so a fix in one is not a fix in the other.
 
-## The footer at mobile — checked, still open
+## The footer at mobile — fixed
 
-At 390px the header is fine: the nav links hide below 840px by design, leaving the wordmark
-and the CTA, and nothing overflows. The footer is not fine. It is still Wix's six absolutely
-positioned pills, and they shrink rather than reflow, so **"Private tours" renders as
-"Private t…" and "Instagram" as "Instagr…"**, across two ragged rows. Nothing overflows the
-viewport and no link is broken — it is ugly, not broken.
+The old footer was Wix's six absolutely positioned pills, which shrink instead of reflowing:
+at 390px, **"Private tours" rendered as "Private t…" and "Instagram" as "Instagr…"**, across
+two ragged rows. `<yu-part>` (the same nav+footer element already live in the header) is now
+wired into the Footer section too, so the blog footer is the homepage's real footer — three
+clean lines, no truncation, verified with a 390px `<iframe>` on the live published page:
 
-Worth knowing if you test this: a JS width check says the labels fit, because it measures
-after the ellipsis is applied. Only the screenshot tells the truth. A 390px `<iframe>` of the
-live page is a genuine mobile viewport (media queries key off it) and was how this was found —
-the browser window itself would not resize.
+> **Yusuf Ucuz** · Private tour guide, Berlin
+> info@yusufucuz.com · @berlinwalkingtour
+> berlinwalk.com
 
-`<yu-part>` is built and live and already renders the footer correctly at 390px (three stacked
-lines, no truncation), but **it is not wired into the Wix footer yet**. Wix drops every newly
-added element into the blog content section regardless of which section is selected, and
-neither layer-panel drag nor cut/paste would move it into the footer section. The stray
-elements were deleted and the six pills restored, so the live site is unchanged and intact.
+Two traps, both worth knowing before touching this again:
 
-Three ways forward, cheapest first:
+- **Wix drops a newly added element into whatever content section it feels like** (here,
+  the blog-listing section) regardless of which section is selected — layer-panel drag and
+  cut/paste both failed to move it afterward. The fix: right-click *inside* the target
+  section on the canvas → **Quick Add → Container**. That command is scoped to the section
+  you clicked, unlike the left-panel "+", so the container lands where you clicked. Then,
+  with that container selected, the left-panel "+" → Custom Element nests correctly inside
+  it — the Add panel evidently uses "currently selected container" as the drop target, but
+  only takes a section as a hint, not an instruction.
+- **"Scale proportionally" (the default responsive mode for a hand-placed container) does
+  not preserve the X you type.** It looked right in the editor (X 0, W 1280) and still broke
+  on the live site — the container rendered ~1000px off-screen to the left, because that
+  mode recomputes position from an internal anchor tied to where the element was *first*
+  dropped, not the literal field value. Fixed by switching the container's Responsive
+  behavior to **Stretch** (docks both edges, no stored X to drift) and the custom element
+  inside it to **Relative width**, matching what the header's element already used. If a
+  custom element or container ever renders correctly in the editor but shifted or missing
+  on the live site, check this setting before anything else — the editor canvas will not
+  show you the bug.
 
-1. **Shorten the two labels** so they stop truncating ("Private tours" → "Tours",
-   "Instagram" → "Insta"). Two edits, weakens the desktop wording slightly.
-2. **Widen those two pills at the mobile breakpoint only.** Keeps the wording; the ragged
-   two-row layout stays. Needs the breakpoint switcher, which did not respond to automation.
-3. **Finish the `<yu-part>` swap by hand** — in the editor, drag a Custom Element into the
-   footer section, point it at `widget/yu-parts-element.js`, set X=0 / W=1280, and hide
-   `box3`. The element handles the rest. This is the one that fixes truncation *and* the
-   ragged layout, and leaves one source of truth.
+The structure is now `Footer #section2 > box4 (Container, Stretch) > customElement3`,
+same `yu-parts-element.js` source as the header. The old six-pill container (`box3`) is
+hidden, not deleted.
 
 ## Next, in order
 
@@ -94,7 +101,6 @@ Three ways forward, cheapest first:
    README.md` has the current status per post. Once images exist, the publishing method below
    is already proven and fast (no more editor UI needed).
 2. Post 10 is still blocked on Yusuf's voice note.
-3. The footer at mobile — see the section above for the three options.
 
 ## How the posts were actually published
 
