@@ -38,9 +38,13 @@ edit the nav in `index.html`, rerun both build scripts, and homepage + blog chan
 Three things about that are worth knowing before touching it again:
 
 - **Wix mounts the tag `<wix-default-custom-element>`** and gives no way to rename it, so the
-  script registers under that name as well as `yu-nav`.
+  script registers under that name as well. This also means **only one script can own the
+  tag per page** — two custom-element files would race and the loser would render the
+  winner's markup. Hence one file, `widget/yu-parts-element.js`, shipping both the nav and
+  the footer and choosing between them by `data-part` or by whether it sits inside the site
+  footer (`scripts/build-parts.py`).
 - **Scope the CSS on a class, not the tag.** Keyed to `yu-nav` it matched nothing and the nav
-  rendered as unstyled blue links. It now wraps the markup in `.yu-nav` and scopes to that.
+  rendered as unstyled blue links. It now wraps the markup in `.yu-part` and scopes to that.
 - **The editor canvas and Preview both lie here** — the canvas does not run the element, and
   Preview serves a cached copy of the script. The published page was the only honest check.
 
@@ -54,15 +58,43 @@ footer's *Private tours*, and every post's closing CTA actually land. Note that
 `build-widget.py` does **not** copy `index.html`'s `<script>` — it carries its own copy of the
 nav behaviour, so a fix in one is not a fix in the other.
 
+## The footer at mobile — checked, still open
+
+At 390px the header is fine: the nav links hide below 840px by design, leaving the wordmark
+and the CTA, and nothing overflows. The footer is not fine. It is still Wix's six absolutely
+positioned pills, and they shrink rather than reflow, so **"Private tours" renders as
+"Private t…" and "Instagram" as "Instagr…"**, across two ragged rows. Nothing overflows the
+viewport and no link is broken — it is ugly, not broken.
+
+Worth knowing if you test this: a JS width check says the labels fit, because it measures
+after the ellipsis is applied. Only the screenshot tells the truth. A 390px `<iframe>` of the
+live page is a genuine mobile viewport (media queries key off it) and was how this was found —
+the browser window itself would not resize.
+
+`<yu-part>` is built and live and already renders the footer correctly at 390px (three stacked
+lines, no truncation), but **it is not wired into the Wix footer yet**. Wix drops every newly
+added element into the blog content section regardless of which section is selected, and
+neither layer-panel drag nor cut/paste would move it into the footer section. The stray
+elements were deleted and the six pills restored, so the live site is unchanged and intact.
+
+Three ways forward, cheapest first:
+
+1. **Shorten the two labels** so they stop truncating ("Private tours" → "Tours",
+   "Instagram" → "Insta"). Two edits, weakens the desktop wording slightly.
+2. **Widen those two pills at the mobile breakpoint only.** Keeps the wording; the ragged
+   two-row layout stays. Needs the breakpoint switcher, which did not respond to automation.
+3. **Finish the `<yu-part>` swap by hand** — in the editor, drag a Custom Element into the
+   footer section, point it at `widget/yu-parts-element.js`, set X=0 / W=1280, and hide
+   `box3`. The element handles the rest. This is the one that fixes truncation *and* the
+   ragged layout, and leaves one source of truth.
+
 ## Next, in order
 
 1. Posts 01, 02, 05, 08, 10 still need cover images — Codex only found 5/10. `content/drafts/
    README.md` has the current status per post. Once images exist, the publishing method below
    is already proven and fast (no more editor UI needed).
 2. Post 10 is still blocked on Yusuf's voice note.
-3. Not checked yet: how the new header and footer look at the mobile breakpoint. The nav hides
-   its links under 900px by design (`.navlinks{display:none}`), which leaves wordmark + button
-   — probably fine, but nobody has looked.
+3. The footer at mobile — see the section above for the three options.
 
 ## How the posts were actually published
 
