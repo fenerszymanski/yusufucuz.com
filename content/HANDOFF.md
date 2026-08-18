@@ -95,6 +95,30 @@ The structure is now `Footer #section2 > box4 (Container, Stretch) > customEleme
 same `yu-parts-element.js` source as the header. The old six-pill container (`box3`) is
 hidden, not deleted.
 
+## Blog link in nav + footer, and post paragraph spacing
+
+Two small fixes, both live and verified:
+
+- **A `Blog` link now sits in the nav and the footer.** Readers on the homepage
+  had no way into the blog and readers on a post had no way back to the listing.
+  Added `<a href="/blog">Blog</a>` to both the `<nav>` and `<footer>` in
+  `index.html` (root-relative `/blog` works from `/`, `/blog`, and `/post/...`),
+  then rebuilt both bundles. One edit, every surface: homepage widget + Wix
+  header + Wix footer.
+
+- **Post paragraphs had no spacing.** Ricos renders each post paragraph with
+  `paragraphData:{}` → `margin:0`, so paragraphs ran straight into each other,
+  and Wix exposes no paragraph-spacing control on the Blog Post element (checked
+  the editor's Post page directly — only size/position/margins, no text design).
+  The header `<yu-part>` is on every blog page already, so it now injects one
+  global stylesheet (`scripts/build-parts.py`, `POST_CSS`) that gives post
+  bodies real rhythm:
+  `p[id^="viewer-"]{margin:0 0 1.3em}` plus heading top-margin. The `viewer-`
+  id prefix is Ricos's long-stable convention and nothing else on the site uses
+  it, so the selector is safe. Fixes all five live posts **and every future
+  post** with no per-post work and no republishing — the spacing is applied at
+  render time, not baked into the content.
+
 ## Next, in order
 
 1. Posts 01, 02, 05, 08, 10 still need cover images — Codex only found 5/10. `content/drafts/
