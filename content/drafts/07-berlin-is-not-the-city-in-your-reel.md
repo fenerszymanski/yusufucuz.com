@@ -58,4 +58,4 @@ Just do not build three days around finding four seconds of somebody else's.
 
 ---
 
-*My walk covers less ground than many Berlin itineraries, on purpose. It begins with the city that existed before the familiar twentieth-century story. [Read what the walk covers](#book).*
+*Berlin Then and Now, my public walk at Walk of Berlin, covers less ground than many Berlin itineraries, on purpose. It begins with the city that existed before the familiar twentieth-century story. [Read what the walk covers](https://walkofberlin.com/book-berlin-walking-tour/berlin-then-and-now).*

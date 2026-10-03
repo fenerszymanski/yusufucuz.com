@@ -34,7 +34,7 @@ Not the headcount. Not the weather.
 
 *Am I going to be good today.*
 
-That is the whole thought, and it does not get easier. On a tip-based tour nobody has paid in advance, so nothing carries over from last week. Whatever I did on Saturday earns me nothing on Tuesday. Every group decides from scratch, in real time, whether the last two hours were worth anything, and they are right to.
+That is the whole thought, and it does not get easier. When I ran tip-based tours, nobody had paid in advance. Whatever I did on Saturday earned me nothing on Tuesday; every group decided from scratch whether the walk was worth anything. My public tour now has a fixed ticket price, but the responsibility is the same: each group deserves a good walk, whatever happened last week.
 
 There is no version of this job where you have banked enough credit to have an ordinary morning. I have made my peace with that. It is standing next to me at the clock every single time.
 
@@ -42,10 +42,10 @@ There is no version of this job where you have banked enough credit to have an o
 
 And then I introduce myself. Not a joke, not a hook, not a question to the group. My name, where I am from, what we are about to do and roughly how long it will take.
 
-I used to think that was the boring option. I have come to think it is the only honest one. Everything I am going to spend the next two hours doing depends on these people believing me, and you do not start that by performing.
+I used to think that was the boring option. I have come to think it is the only honest one. Everything I am going to spend the next two and a half hours doing depends on these people believing me, and you do not start that by performing.
 
 After the first sentence the twenty minutes are gone, and I do not think about any of it again until the next one.
 
 ---
 
-*The public walk starts here at the World Clock. [Details and current availability](#book).*
+*Berlin Then and Now, my public walk at Walk of Berlin, starts here at the World Clock. [Details and current availability](https://walkofberlin.com/book-berlin-walking-tour/berlin-then-and-now).*

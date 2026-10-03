@@ -1,13 +1,21 @@
 # yusufucuz.com — the first 10 posts
 
 Personal-brand content for yusufucuz.com. **Not** tourist search-intent content, which belongs
-on berlinwalk.com. Strict split so the two domains never compete for the same queries:
+on walkofberlin.com. Strict split so the two domains never compete for the same queries:
 
-- **berlinwalk.com** → what visitors search for ("Berlin in 2 days", "is X worth it")
+- **walkofberlin.com** → what visitors search for ("Berlin in 2 days", "is X worth it")
 - **yusufucuz.com** → who Yusuf is: craft, opinion, field notes, career. Builds author
   authority and funnels to the private-tour form (`#book`).
 
-English only. Every post ends with a soft CTA to `#book`.
+English only. Private-tour CTAs use `/#book`; current public-tour CTAs link to
+https://walkofberlin.com/book-berlin-walking-tour/berlin-then-and-now.
+
+Branding update, 3 October 2026: the public brand is **Walk of Berlin**. The current
+public tour is **Berlin Then and Now**, a fixed-ticket walk of around 2.5 hours with
+an archival photograph at every stop. The old tip-based service is retired. Posts
+02 and 05 explicitly retain earlier tour experiences; post 08 labels its August
+2026 review statistics as a historical snapshot. Preserve these historical accounts
+rather than presenting old prices, formats or review counts as current offers.
 
 ## Hard rule for every agent that touches this folder
 

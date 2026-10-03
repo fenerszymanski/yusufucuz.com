@@ -126,7 +126,7 @@ async function notifyByEmail(v) {
       to: NOTIFY_TO,
       subject,
       html,
-      senderName: 'Yusuf from BerlinWalk',
+      senderName: 'Yusuf at Walk of Berlin',
       senderEmail: SENDER_EMAIL,
       replyTo: v.email,
     });

@@ -75,4 +75,4 @@ I still do not enjoy saying it. I just no longer think it is the failure I thoug
 
 ---
 
-*I run walking tours in Berlin's historic centre, and private tours for people who want to go further into one subject than a group route allows. [Tell me what you want to understand](#book).*
+*I run walking tours in Berlin's historic centre, and private tours for people who want to go further into one subject than a group route allows. [Tell me what you want to understand](/#book).*

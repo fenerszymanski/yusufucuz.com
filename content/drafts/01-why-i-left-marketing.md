@@ -49,16 +49,16 @@ That is a much simpler way to live.
 
 ## What I actually do
 
-I run a tip-based walking tour through Berlin's historic centre, from Alexanderplatz to Museum Island, and a private tour line for people who want something built around them rather than around a crowd. I guide in English.
+I run Walk of Berlin. The public tour, Berlin Then and Now, is a ticketed walk through Berlin's historic centre. It takes around two and a half hours, with an archival photograph at every stop. I also offer private tours for people who want something built around them rather than around a crowd. I guide in English.
 
 The route is deliberately not the usual one. Most Berlin tours are about the twentieth century: the Wall, the Cold War, Checkpoint Charlie. Mine starts eight hundred years earlier, in the medieval town almost none of which survives, and moves forwards through Prussian ambition and GDR symbolism to whatever the Humboldt Forum is supposed to be. Visitors notice this before I explain it. It is the thing they mention most often afterwards.
 
 I am not a historian and I did not grow up here. What I have instead is that I read constantly, I check what I say, and when I do not know something I say so out loud.
 
-Some months are precarious. Tip-based work means you find out what your morning was worth after it is over, and I will write about that honestly too, because it is the part of this job people romanticise most and understand least.
+The public walks I started with were tip-based. Some months were precarious: you found out what your morning was worth after it was over. I have written about that honestly too, because it is a part of this job people romanticise and understand least. Today, Berlin Then and Now has a fixed ticket price.
 
 But I have not once, since the beginning of this year, finished a day of work and wondered what it was for.
 
 ---
 
-*I run walking tours in Berlin. If you want one built around your group rather than a crowd, [tell me what you are looking for](#book).*
+*I run Walk of Berlin. If you want a private walk built around your group rather than a crowd, [tell me what you are looking for](/#book).*

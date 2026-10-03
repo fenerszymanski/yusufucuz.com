@@ -60,4 +60,4 @@ So spend the two hours on the ground. The tower will still be there, and it look
 
 ---
 
-*If you want the version that is not on the list, [tell me what interests you](#book).*
+*If you want the version that is not on the list, [tell me what interests you](/#book).*

@@ -38,7 +38,7 @@ Berlin tourism has an enormous gravitational pull towards the twentieth century,
 
 My route does something the others mostly do not. It starts at Alexanderplatz, moves through the oldest quarter of the city, past a church that survived the bombing when almost nothing around it did, along the Spree to Museum Island, and it is about the eight hundred years that came before the part everyone knows. Medieval town, Prussian ambition, imperial display, GDR symbolism, and then whatever it is we are doing now.
 
-You cannot fit that and the Wall into two hours. Something has to be left out, and I would rather leave out the thing that half the city is already covering than leave out the part that explains why any of this is here.
+You cannot fit that and the Wall into two and a half hours. Something has to be left out, and I would rather leave out the thing that half the city is already covering than leave out the part that explains why any of this is here.
 
 ## What the question is actually about
 
@@ -56,4 +56,4 @@ Then, if you want to understand why the city they cut in half looked the way it 
 
 ---
 
-*My regular walk tells the chapters that came before the Wall. The practical details are [on the tour page](#book).*
+*Berlin Then and Now, my public walk at Walk of Berlin, tells the chapters that came before the Wall. The practical details are [on the tour page](https://walkofberlin.com/book-berlin-walking-tour/berlin-then-and-now).*

@@ -12,9 +12,11 @@ notes: >
 
 # What a free tour actually costs
 
-"Free walking tour" is one of the most effective phrases in travel, and I use it, because it is true in the only sense that matters to you: you can join, and you owe nothing.
+**Update — 3 October 2026: This is an account of my earlier tip-based tours. Today, my public tour is Berlin Then and Now at Walk of Berlin, with a fixed ticket price.** [See the current tour and booking details](https://walkofberlin.com/book-berlin-walking-tour/berlin-then-and-now).
 
-It is also the phrase that quietly sets the price before anyone arrives. That is the part worth explaining, and I have never managed to explain it properly while walking backwards through a crowd.
+"Free walking tour" is one of the most effective phrases in travel. I used it when I ran tip-based tours, because it was true in the only sense that mattered to a guest: you could join, and you owed nothing.
+
+It was also the phrase that quietly set the price before anyone arrived. That is the part worth explaining, and I never managed to explain it properly while walking backwards through a crowd.
 
 ## How it actually works
 
@@ -52,15 +54,15 @@ If you asked me what is expensive about this work, I would not start with money.
 
 **Doing all of it.** There is no colleague. Every part of this, from the route to the invoice, is one person, and the tour is the only part anyone sees.
 
-**Having to be good every time.** This is the real one. Nobody has paid in advance, so every group decides from scratch whether the last two hours were worth anything. There is no credit from last week. There is no room for an off day. That is an uncomfortable arrangement, and it is also, I think, the reason I am better at this than I would be on a fixed ticket price.
+**Having to be good every time.** This is the real one. Nobody has paid in advance, so every group decides from scratch whether the last two hours were worth anything. There is no credit from last week. There is no room for an off day. That was an uncomfortable arrangement, and it was also, I think, part of how I learned to guide.
 
-## Why I keep the model anyway
+## Why I kept the model
 
-Because it keeps the pressure in the right place. If you have already paid, I have your money whether the next ninety minutes are good or not. If you have not, the only thing between me and a wasted morning is whether I am worth listening to.
+Because it kept the pressure in the right place. If a guest had already paid, I would have had their money whether the next ninety minutes were good or not. When they had not, the only thing between me and a wasted morning was whether I was worth listening to.
 
-And because it keeps the tour open. Students, families counting every euro, people at the end of a long trip who have run out of money and not out of curiosity. They walk with me and they pay what they can, and I would much rather have them there than have a price at the door that quietly removes them.
+And because it kept the tour open. Students, families counting every euro, people at the end of a long trip who had run out of money and not out of curiosity. They walked with me and paid what they could, and I was glad to have them there.
 
-## If you are the one deciding
+## If you are deciding what to pay on a tip-based tour
 
 Pay what it was worth to you. Not what you think is expected, because there is no expected. If you learned something, if you would recommend it to a friend, that number is probably a little higher than the one in your hand.
 
@@ -68,4 +70,4 @@ And if it was mediocre, pay accordingly, and tell me why. I would genuinely rath
 
 ---
 
-*I also run private tours, where none of this uncertainty exists on either side: fixed price, fixed group, built around what you actually want. [Details here](#book).*
+*I also offer private tours: fixed price, your own group, built around what you actually want. [Details here](/#book).*

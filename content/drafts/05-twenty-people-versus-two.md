@@ -12,6 +12,8 @@ notes: >
 
 # Talking to twenty people, and talking to two
 
+**Update — 3 October 2026: This essay draws on my earlier tours, including groups of twenty. My current public tour is Berlin Then and Now at Walk of Berlin.** [See the current tour and booking details](https://walkofberlin.com/book-berlin-walking-tour/berlin-then-and-now).
+
 Group size changes this job more than the weather, the season, or the route. It changes it more than the subject does. And you find out which job you are doing about ninety seconds before you start.
 
 ## What twenty people need
@@ -52,14 +54,14 @@ What changes is the order, the pace, and how much of the two hours belongs to me
 
 ## Which one is better
 
-The honest answer is that they are different products and I would not want only one of them.
+The honest answer is that they ask different things of a guide, and each taught me something.
 
-The large tour is the one where I am proudest of the material, because material has to be genuinely good to hold twenty strangers on a cold morning. The small tour is the one where people actually understand things, because understanding happens in the follow-up question and a big group rarely gets to ask it.
+The large tours were the ones where I was proudest of the material, because material has to be genuinely good to hold twenty strangers on a cold morning. The small tours showed me how much understanding happens in the follow-up question, which a big group rarely gets to ask.
 
-If you want the second experience, you can just book a private walk and have it deliberately. Same reading behind it, same route knowledge, and two hours that are structured around what you keep asking rather than around what twenty people can be kept together for.
+If you want a walk built around your questions, you can book a private walk and have it deliberately. Same reading behind it, same route knowledge, and time structured around what you keep asking.
 
 ---
 
-*[Tell me who is coming and what you are curious about](#book), and I will build the walk around it.*
+*[Tell me who is coming and what you are curious about](/#book), and I will build the walk around it.*
 
 *The reviews quoted here are on my [FreeTour listing](https://www.freetour.com/berlin/berlin-behind-the-landmarks-a-walk-through-power-faith-change), where you can read all of them, including the critical ones.*

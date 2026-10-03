@@ -14,7 +14,7 @@ notes: >
 
 The hardest thing about guiding in Berlin's historic centre is that most of what I am describing is not there.
 
-The medieval town is gone. The palace was gone, then rebuilt as something else. Whole streets were bombed, cleared, replaced, and in some cases cleared again by a second government with the opposite politics. I spend two hours pointing at things that were demolished, in front of buildings that replaced them, for people who are standing in 2026 and being asked to imagine 1780.
+The medieval town is gone. The palace was gone, then rebuilt as something else. Whole streets were bombed, cleared, replaced, and in some cases cleared again by a second government with the opposite politics. I spend around two and a half hours pointing at things that were demolished, in front of buildings that replaced them, for people who are standing in 2026 and being asked to imagine 1780.
 
 You cannot do that with dates. I have tried. Dates slide off.
 
@@ -62,7 +62,7 @@ Much of the best material on Berlin is in German, and I work through translation
 
 I would rather say that plainly than let a reading list imply otherwise. It means I am slower, it means I lean harder on the sources that exist in English, and it is one of the real limits of being someone who came to this city as an adult rather than growing up in it. A guest once wrote as much in a review. He had a point.
 
-What I can do is be careful, be explicit about what I do not know, and keep the standard for what earns a place in the two hours high enough that nobody has to take my word for anything.
+What I can do is be careful, be explicit about what I do not know, and keep the standard for what earns a place on the walk high enough that nobody has to take my word for anything.
 
 ## What the preparation is for
 
@@ -72,4 +72,4 @@ The image earns its place only if it helps someone see what is in front of them 
 
 ---
 
-*The photographs and maps are part of my regular historic-centre walk. [See what the route covers](#book).*
+*The photographs and maps are part of Berlin Then and Now, my public historic-centre walk at Walk of Berlin, with an archival photograph at every stop. [See what the route covers](https://walkofberlin.com/book-berlin-walking-tour/berlin-then-and-now).*

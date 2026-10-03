@@ -7,8 +7,8 @@ words: ~950
 notes: >
   Ratings read from FreeTour on 16 Aug 2026: 9.8 overall across 26 reviews,
   Organisation 9.9, Atmosphere 9.9, Content 10.0, Guide 9.9, Usefulness 9.8.
-  RE-CHECK before publishing, the count moves. Two real criticisms quoted, names
-  removed, per Yusuf. The "outsider's perspective is an advantage" defence is
+  Historical August 2026 snapshot, explicitly dated in the article. Two real
+  criticisms quoted, names removed, per Yusuf. The "outsider's perspective is an advantage" defence is
   deliberately NOT used.
 ---
 
@@ -20,7 +20,7 @@ I spent ten years in marketing, where reviews were something you generated, enco
 
 ## The numbers
 
-On FreeTour the tour currently sits at **9.8 out of 10 across 26 reviews**: Content 10.0, Guide 9.9, Atmosphere 9.9, Organisation 9.9, Usefulness 9.8.
+On 16 August 2026, my FreeTour listing showed **9.8 out of 10 across 26 reviews**: Content 10.0, Guide 9.9, Atmosphere 9.9, Organisation 9.9, Usefulness 9.8. This essay draws on that historical snapshot, rather than a live review count.
 
 Those are good numbers and they are also not very informative. At this sample size a 9.8 mostly means I have not been properly tested yet. What is informative is what people chose to write about when nobody asked them to.
 

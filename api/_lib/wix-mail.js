@@ -23,7 +23,7 @@ export async function sendWixEmail({ siteId, to, subject, html, senderName, send
     emailTransmission: {
       emailSubject: subject,
       emailHtmlContent: html,
-      senderName: senderName || 'Yusuf from BerlinWalk',
+      senderName: senderName || 'Yusuf at Walk of Berlin',
       senderEmailAddress: senderEmail,
       toRecipients: [{ emailAddress: to }],
       type: 'TRANSACTIONAL',
